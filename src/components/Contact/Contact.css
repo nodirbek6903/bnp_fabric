@@ -1,0 +1,94 @@
+.contact-container{
+    margin-top: 70px;
+}
+.contact-container .container{
+    max-width: 1560px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+    overflow: hidden;
+    align-content:center;
+    margin: 0 auto;
+}
+.contact-form{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.form-items{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 2rem;
+    align-items: flex-start;
+}
+.form-items .form-title{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.form-input,.form-textarea{
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    background: #e2e2e2;
+    resize: none;
+    outline: none;
+}
+.sub-btns{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.sub-btns .sub-btn{
+    width: 150px;
+    padding: 10px 0;
+    border-radius: 20px;
+    border: none;
+    background: #f42c37;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.sub-btns .sub-btn:hover{
+    background: #000;
+}
+
+.iframe-container{
+    width: 45%;
+}
+.iframe-container iframe{
+    height: 550px;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+}
+.contact-cards{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+}
+.contact-card{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.contact-card .contact-icon{
+    font-size: 3rem;
+    color: #f42c37;
+}
+.contact-card:nth-child(2) .contact-texts{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contact-card .contact-text{
+    font-size: 20px;
+    color: #555;
+}

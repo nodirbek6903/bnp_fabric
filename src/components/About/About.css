@@ -1,0 +1,38 @@
+.about-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px 0;
+    gap: 1rem;
+}
+.about-container .about-left{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.about-left .left-title{
+    font-size: 3rem;
+    color: #000;
+    font-weight: bold;
+}
+.about-left .left-texts{
+    display: flex;flex-direction: column;
+    gap: 1rem;
+}
+.about-left .left-texts .left-text{
+    color: #555;
+    line-height: 1.5;
+}
+.about-container .about-right{
+    width: 50%;
+}
+.about-right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}

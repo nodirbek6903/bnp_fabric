@@ -1,14 +1,17 @@
 .nav-container{
     width: 100%;
+    margin: 0 auto;
 }
 .nav-container .container{
+    max-width: 1560px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 100px;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    padding: 0 50px;
+    /* padding: 0 30px; */
+    margin: 0 auto;
 }
 .container .nav-logo-items{
     width: 40%;
