@@ -18,7 +18,7 @@ const Main = () => {
 
   const handleCollectionClick = (collection) => {
     setSelectedCollection(collection);
-    navigate(`/product/${collection.name}`,{state: {collection}});
+    navigate(`/product/${collection.id}`);
     console.log(collection);
   };
 
