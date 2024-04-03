@@ -2,10 +2,16 @@ import React, { useState } from 'react'
 import "./ProductCategory.css"
 import {FaChevronRight, FaSearch, FaChevronDown} from "react-icons/fa"
 import { MdArrowRightAlt } from "react-icons/md";
-import Img from "../../images/SummerCollection1.jpg"
+import { useParams } from 'react-router-dom';
 
-const ProductCategory = () => {
+const ProductCategory = ({data}) => {
     const [showCategory,setShowCategory] = useState(false)
+    const {collectionName} = useParams()
+    const selectedCategory = data.filter(category => category.collectionName === collectionName)
+
+    if(!selectedCategory){
+        <div>Loading...</div>
+    }
 
     const handlShowCategory = () => {
         setShowCategory(!showCategory)
@@ -25,10 +31,10 @@ const ProductCategory = () => {
                     {showCategory ? <FaChevronDown className='icon-collection' /> : <FaChevronRight className='icon-collection' />}
                 </div>
                 <div className={`category-items ${showCategory ? "active" : null}`}>
-                    <a href="/product-category/" className="category-link"><span className="category-item">Spring Collection</span></a>
-                    <a href="/product-category/" className="category-link"><span className="category-item">Winter Collection</span></a>
-                    <a href="/product-category/" className="category-link"><span className="category-item">Summer Collection</span></a>
-                    <a href="/product-category/" className="category-link"><span className="category-item">Autumn Collection</span></a>
+                    <a href={`/product-category/Autumn Collection`} className="category-link"><span className="category-item">Autumn Collection</span></a>
+                    <a href={`/product-category/Spring Collection`} className="category-link"><span className="category-item">Spring Collection</span></a>
+                    <a href={`/product-category/Winter Collection`} className="category-link"><span className="category-item">Winter Collection</span></a>
+                    <a href={`/product-category/Summer Collection`} className="category-link"><span className="category-item">Summer Collection</span></a>
                 </div>
             </div>
         </div>
@@ -48,78 +54,16 @@ const ProductCategory = () => {
                 </select>
             </div>
             <div className="right-cards">
-                <div className="right-card">
+                {selectedCategory.map((category,ind) => (
+                    <div className="right-card" key={ind}>
                     <div className="right-card-img">
-                        <img src={Img} alt="" />
+                        <img src={category.img} alt="" />
                     </div>
                     <span className="right-card-text">
-                        Squares
+                        {category.name}
                     </span>
                 </div>
-                <div className="right-card">
-                    <div className="right-card-img">
-                        <img src={Img} alt="" />
-                    </div>
-                    <span className="right-card-text">
-                        Squares
-                    </span>
-                </div>
-                <div className="right-card">
-                    <div className="right-card-img">
-                        <img src={Img} alt="" />
-                    </div>
-                    <span className="right-card-text">
-                        Squares
-                    </span>
-                </div>
-                <div className="right-card">
-                    <div className="right-card-img">
-                        <img src={Img} alt="" />
-                    </div>
-                    <span className="right-card-text">
-                        Squares
-                    </span>
-                </div>
-                <div className="right-card">
-                    <div className="right-card-img">
-                        <img src={Img} alt="" />
-                    </div>
-                    <span className="right-card-text">
-                        Squares
-                    </span>
-                </div>
-                <div className="right-card">
-                    <div className="right-card-img">
-                        <img src={Img} alt="" />
-                    </div>
-                    <span className="right-card-text">
-                        Squares
-                    </span>
-                </div>
-                <div className="right-card">
-                    <div className="right-card-img">
-                        <img src={Img} alt="" />
-                    </div>
-                    <span className="right-card-text">
-                        Squares
-                    </span>
-                </div>
-                <div className="right-card">
-                    <div className="right-card-img">
-                        <img src={Img} alt="" />
-                    </div>
-                    <span className="right-card-text">
-                        Squares
-                    </span>
-                </div>
-                <div className="right-card">
-                    <div className="right-card-img">
-                        <img src={Img} alt="" />
-                    </div>
-                    <span className="right-card-text">
-                        Squares
-                    </span>
-                </div>
+                ))}
             </div>
             <div className="cards-length">
             <a href="/" className='length-item link-item'>

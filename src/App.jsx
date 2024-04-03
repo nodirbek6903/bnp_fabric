@@ -19,7 +19,7 @@ function App() {
         <Route path="/shop" element={<Collection />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/product/:name" element={<ProductDetails data={CollectionData} />} />
-        <Route path="/product-category/:collectionName" element={<ProductCategory />} />
+        <Route path="/product-category/:collectionName" element={<ProductCategory data={CollectionData} />} />
       </Routes>
       <Footer />
     </div>

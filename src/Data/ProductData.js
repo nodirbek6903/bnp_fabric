@@ -448,7 +448,77 @@ const CollectionData = [
             size:"Special size",
             manufacturer: "Bukhara Natural Product"
         }
-    }
+    },
+    {
+        id:31,
+        collectionName: "Spring Collection",
+        name:"Olive branch",
+        img:SummerCollection10,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:32,
+        collectionName: "Spring Collection",
+        name:"Olive branch",
+        img:SummerCollection10,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:33,
+        collectionName: "Spring Collection",
+        name:"Olive branch",
+        img:SummerCollection10,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:34,
+        collectionName: "Spring Collection",
+        name:"Olive branch",
+        img:SummerCollection10,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:35,
+        collectionName: "Spring Collection",
+        name:"Olive branch",
+        img:SummerCollection10,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
 ]
 
 export  default CollectionData
