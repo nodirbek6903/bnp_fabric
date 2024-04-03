@@ -96,7 +96,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div className="winter-collection">
+      <div className="collection">
         <div className="collection-title">
           <span className="title">Winter Collection</span>
           <div className="brend-text">Bukhara Natural Product</div>
@@ -141,7 +141,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div className="winter-collection">
+      <div className="collection">
         <div className="collection-title">
           <span className="title">Autumn Collection</span>
           <div className="brend-text">Bukhara Natural Product</div>
@@ -186,7 +186,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div className="winter-collection">
+      <div className="collection">
         <div className="collection-title">
           <span className="title">Summer Collection</span>
           <div className="brend-text">Bukhara Natural Product</div>

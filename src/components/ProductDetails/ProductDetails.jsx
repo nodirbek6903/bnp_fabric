@@ -1,5 +1,6 @@
 import React from "react"
 import { useParams } from "react-router-dom"
+import "./ProductDetails.css"
 
 const ProductDetails = ({data}) => {
   const {name} = useParams()
@@ -8,12 +9,11 @@ const ProductDetails = ({data}) => {
   if(!selectedCollection){
     return <div>Loading...</div>
   }
-  const {img,productDetails} = selectedCollection
+  const {img,productDetails,collectionName} = selectedCollection
   
   return (
     <div className='selected-container'>
       <div className="selected-cards">
-      
         <div className="selected-card">
           <div className="selected-img">
             <img src={img} alt="" />
@@ -25,27 +25,33 @@ const ProductDetails = ({data}) => {
                 <td>Material:</td>
                 <td>{productDetails?.material}</td>
               </tr>
+              <hr />
               <tr>
                 <td>Pillow case:</td>
                 <td>{productDetails?.pillow_case}</td>
               </tr>
+              <hr />
               <tr>
                 <td>Bed sheet:</td>
                 <td>{productDetails?.bed_sheet}</td>
               </tr>
+              <hr />
               <tr>
                 <td>Duvet cover:</td>
                 <td>{productDetails?.duvet_cover}</td>
               </tr>
+              <hr />
               <tr>
                 <td>Size:</td>
                 <td>{productDetails?.size}</td>
               </tr>
+              <hr />
               <tr>
                 <td>Manufacturer:</td>
                 <td>{productDetails?.manufacturer}</td>
               </tr>
             </table>
+            <span className="category-name">Category: <a href={`/product-category/${collectionName}`}>{collectionName}</a></span>
           </div>
         </div>
         </div>
