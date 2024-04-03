@@ -28,9 +28,10 @@ import SummerCollection7 from "../images/SummerCollection7.jpg"
 import SummerCollection8 from "../images/SummerCollection8.jpg"
 import SummerCollection9 from "../images/SummerCollection9.jpg"
 import SummerCollection10 from "../images/SummerCollection10.jpg"
-const WinterCollection = [
+const CollectionData = [
     {
         id:1,
+        collectionName:"Winter Collection",
         name:"Squares",
         img: WinterCollection1,
         productDetails: {
@@ -44,6 +45,7 @@ const WinterCollection = [
     },
     {
         id:2,
+        collectionName:"Winter Collection",
         name:"Ikat",
         img: WinterCollection2,
         productDetails: {
@@ -57,6 +59,7 @@ const WinterCollection = [
     },
     {
         id:3,
+        collectionName:"Winter Collection",
         name:"Circles",
         img:WinterCollection3,
         productDetails: {
@@ -70,6 +73,7 @@ const WinterCollection = [
     },
     {
         id:4,
+        collectionName:"Winter Collection",
         name:"Geometry blue",
         img: WinterCollection4,
         productDetails: {
@@ -83,6 +87,7 @@ const WinterCollection = [
     },
     {
         id:5,
+        collectionName:"Winter Collection",
         name:"Tropical leaves",
         img: WinterCollection5,
         productDetails: {
@@ -96,6 +101,7 @@ const WinterCollection = [
     },
     {
         id:6,
+        collectionName:"Winter Collection",
         name:"Bambi",
         img: WinterCollection6,
         productDetails: {
@@ -109,6 +115,7 @@ const WinterCollection = [
     },
     {
         id:7,
+        collectionName:"Winter Collection",
         name:"Byzantium",
         img: WinterCollection7,
         productDetails: {
@@ -122,6 +129,7 @@ const WinterCollection = [
     },
     {
         id:8,
+        collectionName:"Winter Collection",
         name:"Evening Garden",
         img: WinterCollection8,
         productDetails: {
@@ -135,6 +143,7 @@ const WinterCollection = [
     },
     {
         id:9,
+        collectionName:"Winter Collection",
         name:"Feather Marquis",
         img: WinterCollection9,
         productDetails: {
@@ -148,6 +157,7 @@ const WinterCollection = [
     },
     {
         id:10,
+        collectionName:"Winter Collection",
         name:"Lavender roses",
         img: WinterCollection10,
         productDetails: {
@@ -158,11 +168,10 @@ const WinterCollection = [
             size:"Special size",
             manufacturer: "Bukhara Natural Product"
         }
-    }
-]
-const AutumnCollection = [
+    },
     {
-        id:1,
+        id:11,
+        collectionName:"Autumn Collection",
         name:"Safari",
         img:AutumnCollection1,
         productDetails: {
@@ -175,7 +184,8 @@ const AutumnCollection = [
         }
     },
     {
-        id:2,
+        id:12,
+        collectionName:"Autumn Collection",
         name: "Multicolored amethyst",
         img:AutumnCollection2,
         productDetails: {
@@ -188,7 +198,8 @@ const AutumnCollection = [
         }
     },
     {
-        id:3,
+        id:13,
+        collectionName:"Autumn Collection",
         name:"Stucco ornament",
         img:AutumnCollection3,
         productDetails: {
@@ -201,7 +212,8 @@ const AutumnCollection = [
         }
     },
     {
-        id:4,
+        id:14,
+        collectionName:"Autumn Collection",
         name:"Emerald (AB)",
         img:AutumnCollection4,
         productDetails: {
@@ -214,7 +226,8 @@ const AutumnCollection = [
         }
     },
     {
-        id:5,
+        id:15,
+        collectionName:"Autumn Collection",
         name:"Malachite Box",
         img:AutumnCollection5,
         productDetails: {
@@ -227,7 +240,8 @@ const AutumnCollection = [
         }
     },
     {
-        id:6,
+        id:16,
+        collectionName:"Autumn Collection",
         name:"Scents of spring",
         img:AutumnCollection6,
         productDetails: {
@@ -240,7 +254,8 @@ const AutumnCollection = [
         }
     },
     {
-        id:7,
+        id:17,
+        collectionName:"Autumn Collection",
         name:"Autumn leaf fall (AB)",
         img:AutumnCollection7,
         productDetails: {
@@ -253,7 +268,8 @@ const AutumnCollection = [
         }
     },
     {
-        id:8,
+        id:18,
+        collectionName:"Autumn Collection",
         name:"Blue Breeze (AB)",
         img:AutumnCollection8,
         productDetails: {
@@ -266,7 +282,8 @@ const AutumnCollection = [
         }
     },
     {
-        id:9,
+        id:19,
+        collectionName:"Autumn Collection",
         name:"Water Blue (AB)",
         img:AutumnCollection9,
         productDetails: {
@@ -279,7 +296,8 @@ const AutumnCollection = [
         }
     },
     {
-        id:10,
+        id:20,
+        collectionName:"Autumn Collection",
         name:"Plaid",
         img:AutumnCollection10,
         productDetails: {
@@ -290,11 +308,10 @@ const AutumnCollection = [
             size:"Special size",
             manufacturer: "Bukhara Natural Product"
         }
-    }
-]
-const SummerCollection = [
+    },
     {
-        id:1,
+        id:21,
+        collectionName: "Summer Collection",
         name:"Vintage Style",
         img:SummerCollection1,
         productDetails: {
@@ -307,7 +324,8 @@ const SummerCollection = [
         }
     },
     {
-        id:2,
+        id:22,
+        collectionName: "Summer Collection",
         name:"Fluttering dandelion",
         img:SummerCollection2,
         productDetails: {
@@ -320,7 +338,8 @@ const SummerCollection = [
         }
     },
     {
-        id:3,
+        id:23,
+        collectionName: "Summer Collection",
         name:"French Riviera",
         img:SummerCollection3,
         productDetails: {
@@ -333,7 +352,8 @@ const SummerCollection = [
         }
     },
     {
-        id:4,
+        id:24,
+        collectionName: "Summer Collection",
         name:"Dolly the Sleep",
         img:SummerCollection4,
         productDetails: {
@@ -346,7 +366,8 @@ const SummerCollection = [
         }
     },
     {
-        id:5,
+        id:25,
+        collectionName: "Summer Collection",
         name:"Alpine herbs",
         img:SummerCollection5,
         productDetails: {
@@ -359,7 +380,8 @@ const SummerCollection = [
         }
     },
     {
-        id:6,
+        id:26,
+        collectionName: "Summer Collection",
         name:"Inspirational",
         img:SummerCollection6,
         productDetails: {
@@ -372,7 +394,8 @@ const SummerCollection = [
         }
     },
     {
-        id:7,
+        id:27,
+        collectionName: "Summer Collection",
         name:"Green lotus",
         img:SummerCollection7,
         productDetails: {
@@ -385,7 +408,8 @@ const SummerCollection = [
         }
     },
     {
-        id:8,
+        id:28,
+        collectionName: "Summer Collection",
         name:"Mountain cornflower",
         img:SummerCollection8,
         productDetails: {
@@ -398,7 +422,8 @@ const SummerCollection = [
         }
     },
     {
-        id:9,
+        id:29,
+        collectionName: "Summer Collection",
         name:"Sakura branch",
         img:SummerCollection9,
         productDetails: {
@@ -411,7 +436,8 @@ const SummerCollection = [
         }
     },
     {
-        id:10,
+        id:30,
+        collectionName: "Summer Collection",
         name:"Olive branch",
         img:SummerCollection10,
         productDetails: {
@@ -425,4 +451,4 @@ const SummerCollection = [
     }
 ]
 
-export  {WinterCollection,AutumnCollection,SummerCollection}
+export  default CollectionData
