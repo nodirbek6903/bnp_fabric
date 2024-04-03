@@ -1,13 +1,12 @@
 import React from "react"
+// import { useSelector } from "react-redux"
 
-const ProductDetails = ({collection}) => {
-  if(!collection){
-    console.log(collection)
-    return(
-      <div>
-        <p>Malumot topilmadi!</p>
-      </div>
-    )
+const ProductDetails = ({selectedCollection}) => {
+  // const selectedCollection = useSelector(state => state.productDetails.selectedCollection)
+  // console.log(selectedCollection)
+
+  if(!selectedCollection){
+    return <div>Loading...</div>
   }
   
   return (
@@ -16,34 +15,34 @@ const ProductDetails = ({collection}) => {
       
         <div className="selected-card">
           <div className="selected-img">
-            <img src={collection.img} alt="" />
+            <img src={selectedCollection.img} alt="" />
           </div>
           <div className="selected-table">
-            <span className="selected-title">{collection.name}</span>
+            <span className="selected-title">{selectedCollection.name}</span>
             <table className="table-container">
               <tr>
                 <td>Material:</td>
-                <td>{collection?.productDetails?.material}</td>
+                <td>{selectedCollection?.productDetails?.material}</td>
               </tr>
               <tr>
                 <td>Pillow case:</td>
-                <td>{collection?.productDetails?.pillow_case}</td>
+                <td>{selectedCollection?.productDetails?.pillow_case}</td>
               </tr>
               <tr>
                 <td>Bed sheet:</td>
-                <td>{collection?.productDetails?.bed_sheet}</td>
+                <td>{selectedCollection?.productDetails?.bed_sheet}</td>
               </tr>
               <tr>
                 <td>Duvet cover:</td>
-                <td>{collection?.productDetails?.duvet_cover}</td>
+                <td>{selectedCollection?.productDetails?.duvet_cover}</td>
               </tr>
               <tr>
                 <td>Size:</td>
-                <td>{collection?.productDetails?.size}</td>
+                <td>{selectedCollection?.productDetails?.size}</td>
               </tr>
               <tr>
                 <td>Manufacturer:</td>
-                <td>{collection?.productDetails?.manufacturer}</td>
+                <td>{selectedCollection?.productDetails?.manufacturer}</td>
               </tr>
             </table>
           </div>

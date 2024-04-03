@@ -8,7 +8,7 @@ import AboutIcon2 from "../../images/main-icon2.svg";
 import AboutIcon3 from "../../images/main-icon3.svg";
 import AboutIcon4 from "../../images/main-icon4.svg";
 import Winter from "../../images/main2.png";
-import WinterCollection from "./../../Data/ProductData";
+import {WinterCollection,AutumnCollection,SummerCollection} from "./../../Data/ProductData";
 import {useNavigate } from "react-router-dom";
 import ProductDetails from "../ProductDetails/ProductDetails";
 
@@ -17,13 +17,13 @@ const Main = () => {
   const navigate = useNavigate();
 
   const handleCollectionClick = (collection) => {
-    setSelectedCollection(collection);
-    navigate(`/product/${collection.id}`);
+    setSelectedCollection(prev => prev = collection);
+    navigate(`/product/${collection.name}`);
     console.log(collection);
   };
 
   if(selectedCollection) {
-    return <ProductDetails collection={selectedCollection} />
+    return <ProductDetails selectedCollection={selectedCollection} />
   }
   return (
     <div className="main-container">
@@ -144,7 +144,7 @@ const Main = () => {
           <div className="brend-text">Bukhara Natural Product</div>
         </div>
         <div className="collection-cards">
-          {WinterCollection.map((collection, ind) => (
+          {AutumnCollection.map((collection, ind) => (
             <div
               className="collection-card"
               key={ind}
@@ -189,7 +189,7 @@ const Main = () => {
           <div className="brend-text">Bukhara Natural Product</div>
         </div>
         <div className="collection-cards">
-          {WinterCollection.map((collection, ind) => (
+          {SummerCollection.map((collection, ind) => (
             <div
               className="collection-card"
               key={ind}
