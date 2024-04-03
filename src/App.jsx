@@ -7,6 +7,7 @@ import Contact from "./components/Contact/Contact";
 import Collection from "./components/Collection/Collection";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import CollectionData from "./Data/ProductData";
+import ProductCategory from "./components/ProductCategory/ProductCategory";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/shop" element={<Collection />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/product/:name" element={<ProductDetails data={CollectionData} />} />
+        <Route path="/product-category/:collectionName" element={<ProductCategory />} />
       </Routes>
       <Footer />
     </div>
