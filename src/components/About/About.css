@@ -5,6 +5,8 @@
     justify-content: space-evenly;
     padding: 50px 0;
     gap: 1rem;
+    max-width: 1560px;
+    margin: 0 auto;
 }
 .about-container .about-left{
     width: 40%;
