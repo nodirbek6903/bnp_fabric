@@ -12,6 +12,8 @@ const Collection = () => {
   const [endIndex, setEndIndex] = useState(16);
   const [currentPage, setCurrentPage] = useState(0);
   const [selectedCollection, setSelectedCollection] = useState(null);
+  const [searchCollection,setSearchCollection] = useState("")
+  const [filteredCollection, setFilteredCollection] = useState(CollectionData)
   const navigate = useNavigate()
 
   const handleNextPage = () => {
@@ -52,6 +54,16 @@ if (currentPage < 0) {
     console.log(collection);
     window.scrollTo({top:0})
   }
+// qidiruv uchun
+
+  const handleSearchChange = (e) => {
+    const searchText = e.target.value.toLowerCase()
+    setSearchCollection(searchText)
+    const filtered = CollectionData.filter((item) => 
+    item.name.toLocaleLowerCase().includes(searchText)
+    )
+    setFilteredCollection(filtered)
+  }
 
   if(selectedCollection){
     return <ProductDetails selectedCollection={selectedCollection} />
@@ -64,6 +76,8 @@ if (currentPage < 0) {
             type="text"
             placeholder="Search here"
             className="search-input"
+            value={searchCollection}
+            onChange={handleSearchChange}
             autoComplete="off"
           />
           <div className="icon-con">
@@ -156,7 +170,7 @@ if (currentPage < 0) {
           </select>
         </div>
         <div className="shop-right-cards">
-          {CollectionData.slice(startIndex - 1, endIndex).map(
+          {filteredCollection.slice(startIndex - 1, endIndex).map(
             (collection, ind) => (
               <div className="shop-right-card" key={ind} onClick={() => handleCollectionClick(collection)}>
                 <div className="shop-right-card-img">
@@ -167,8 +181,8 @@ if (currentPage < 0) {
             )
           )}
         </div>
-        <div className="shop-right-cards-length">
-          {/* <a href="/" className="length-item link-item">
+        {/* <div className="shop-right-cards-length">
+          <a href="/" className="length-item link-item">
             <span>1</span>
           </a>
           <a href="/" className="length-item link-item">
@@ -182,7 +196,7 @@ if (currentPage < 0) {
           </a>
           <a href="/" className="length-item link-item">
             <span>5</span>
-          </a> */}
+          </a> 
           <a
             className="length-item"
             onClick={handleBackPage}
@@ -199,7 +213,7 @@ if (currentPage < 0) {
               <FaArrowRightLong />
             </span>
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );
