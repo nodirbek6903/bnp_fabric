@@ -2,14 +2,60 @@ import React, { useState } from "react";
 import "./Collection.css";
 import { FaChevronDown, FaChevronRight, FaSearch } from "react-icons/fa";
 import CollectionData from "../../Data/ProductData";
-import { MdArrowRightAlt } from "react-icons/md";
+import { FaArrowLeftLong,FaArrowRightLong } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
+import ProductDetails from "../ProductDetails/ProductDetails";
 
 const Collection = () => {
   const [showCategory, setShowCategory] = useState(false);
+  const [startIndex, setStartIndex] = useState(1);
+  const [endIndex, setEndIndex] = useState(16);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [selectedCollection, setSelectedCollection] = useState(null);
+  const navigate = useNavigate()
+
+  const handleNextPage = () => {
+    if (endIndex + 16 <= CollectionData.length) {
+        setStartIndex(prev => prev + 16);
+        setEndIndex(prev => prev + 16);
+        setCurrentPage(prev => prev + 1);
+    }else{
+        setStartIndex(CollectionData.length - 16);
+        setEndIndex(CollectionData.length);
+    }
+};
+
+const handleBackPage = () => {
+    if (startIndex - 16 >= 1) {
+        setStartIndex(prev => prev - 16);
+        setEndIndex(prev => prev - 16);
+        setCurrentPage(prev => prev - 1);
+    }else{
+        setStartIndex(1);
+        setEndIndex(16);
+    }
+};
+
+if (currentPage < 0) {
+    setCurrentPage(0);
+    setStartIndex(1);
+    setEndIndex(16);
+}
 
   const handleShowCategoryClick = () => {
     setShowCategory(!showCategory);
   };
+
+  const handleCollectionClick = (collection) => {
+    setSelectedCollection((prev) => (prev = collection));
+    navigate(`/product/${collection.name}`);
+    console.log(collection);
+    window.scrollTo({top:0})
+  }
+
+  if(selectedCollection){
+    return <ProductDetails selectedCollection={selectedCollection} />
+  }
   return (
     <div className="shop-container">
       <div className="shop-left">
@@ -84,7 +130,9 @@ const Collection = () => {
         <div className="shop-right-title">
           <div className="collection-length">
             <span>Collection</span>
-            <span>Showing 1-16 of {CollectionData.length}</span>
+            <span>
+              Showing {startIndex}-{endIndex} of {CollectionData.length}
+            </span>
           </div>
           <select className="right-select">
             <option className="select-item" value="initialsort">
@@ -108,17 +156,19 @@ const Collection = () => {
           </select>
         </div>
         <div className="shop-right-cards">
-          {CollectionData.map((collection, ind) => (
-            <div className="shop-right-card" key={ind}>
-              <div className="shop-right-card-img">
-                <img src={collection.img} alt="" />
+          {CollectionData.slice(startIndex - 1, endIndex).map(
+            (collection, ind) => (
+              <div className="shop-right-card" key={ind} onClick={() => handleCollectionClick(collection)}>
+                <div className="shop-right-card-img">
+                  <img src={collection.img} alt="" />
+                </div>
+                <span className="shop-right-card-text">{collection.name}</span>
               </div>
-              <span className="shop-right-card-text">{collection.name}</span>
-            </div>
-          ))}
+            )
+          )}
         </div>
         <div className="shop-right-cards-length">
-          <a href="/" className="length-item link-item">
+          {/* <a href="/" className="length-item link-item">
             <span>1</span>
           </a>
           <a href="/" className="length-item link-item">
@@ -132,10 +182,21 @@ const Collection = () => {
           </a>
           <a href="/" className="length-item link-item">
             <span>5</span>
-          </a>
-          <a href="/" className="length-item">
+          </a> */}
+          <a
+            className="length-item"
+            onClick={handleBackPage}
+          >
             <span>
-              <MdArrowRightAlt />
+              <FaArrowLeftLong />
+            </span>
+          </a>
+          <a
+            className="length-item"
+            onClick={handleNextPage}
+          >
+            <span>
+              <FaArrowRightLong />
             </span>
           </a>
         </div>

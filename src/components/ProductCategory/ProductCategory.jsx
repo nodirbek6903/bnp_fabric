@@ -2,12 +2,47 @@ import React, { useState } from 'react'
 import "./ProductCategory.css"
 import {FaChevronRight, FaSearch, FaChevronDown} from "react-icons/fa"
 import { MdArrowRightAlt } from "react-icons/md";
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import ProductDetails from '../ProductDetails/ProductDetails';
 
 const ProductCategory = ({data}) => {
     const [showCategory,setShowCategory] = useState(false)
     const {collectionName} = useParams()
     const selectedCategory = data.filter(category => category.collectionName === collectionName)
+    const [startIndex, setStartIndex] = useState(1);
+    const [endIndex, setEndIndex] = useState(16);
+    const [currentPage, setCurrentPage] = useState(0);
+    const navigate = useNavigate()
+    
+    if(endIndex > selectedCategory.length){
+        setEndIndex(selectedCategory.length)
+    }
+
+    const handleNextPage = () => {
+        if (endIndex + 16 <= selectedCategory.length) {
+            setStartIndex(prev => prev + 16);
+            setEndIndex(prev => prev + 16);
+            setCurrentPage(prev => prev + 1);
+        }else{
+            setStartIndex(selectedCategory.length - 16);
+            setEndIndex(selectedCategory.length);
+        }
+    }
+    const handleBackPage = () => {
+        if (startIndex - 16 >= 1) {
+            setStartIndex(prev => prev - 16);
+            setEndIndex(prev => prev - 16);
+            setCurrentPage(prev => prev - 1);
+        }else{
+            setStartIndex(1);
+            setEndIndex(16);
+        }
+    }
+    const handleClickProduct = (category) => {
+        navigate(`/product/${category.name}`)
+        window.scrollTo({top:0})
+        console.log(category);
+    }
 
     if(!selectedCategory){
         <div>Loading...</div>
@@ -42,7 +77,7 @@ const ProductCategory = ({data}) => {
             <div className="right-title">
                 <div className="collection-length">
                     <span>Collection</span>
-                    <span>Showing 1-16 of 76</span>
+                    <span>Showing {startIndex}-{endIndex} of {selectedCategory.length}</span>
                 </div>
                 <select className="right-select">
                     <option className='select-item' value="initialsort">Initial sort</option>
@@ -55,7 +90,7 @@ const ProductCategory = ({data}) => {
             </div>
             <div className="right-cards">
                 {selectedCategory.map((category,ind) => (
-                    <div className="right-card" key={ind}>
+                    <div className="right-card" key={ind} onClick={() => handleClickProduct(category)}>
                     <div className="right-card-img">
                         <img src={category.img} alt="" />
                     </div>
