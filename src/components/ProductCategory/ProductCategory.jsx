@@ -126,26 +126,11 @@ const ProductCategory = ({ data }) => {
               Showing {startIndex}-{endIndex} of {selectedCategory.length}
             </span>
           </div>
-          <select className="right-select">
-            <option className="select-item" value="initialsort">
-              Initial sort
-            </option>
-            <option className="select-item" value="bypopularity">
-              By popularity
-            </option>
-            <option className="select-item" value="byrating">
-              By rating
-            </option>
-            <option className="select-item" value="bynovelty">
-              By novelty
-            </option>
-            <option className="select-item" value="ascending">
-              Prices:ascending
-            </option>
-            <option className="select-item" value="descending">
-              Prices:descending
-            </option>
-          </select>
+          <a href="/contact-us">
+          <button className="right-buttons-contact">
+            Contact
+          </button>
+          </a>
         </div>
         <div className="right-cards">
           {filteredCollection.map((category, ind) => (
