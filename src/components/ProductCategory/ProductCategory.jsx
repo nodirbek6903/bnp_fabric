@@ -73,7 +73,7 @@ const ProductCategory = ({ data }) => {
             type="text"
             placeholder="Search here"
             value={searchCollection}
-            onClick={handleSearchChange}
+            onChange={handleSearchChange}
             className="search-input"
             autoComplete="off"
           />
