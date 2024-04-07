@@ -121,8 +121,8 @@ const ProductCategory = ({ data }) => {
       <div className="category-right">
         <div className="right-title">
           <div className="collection-length">
-            <span>Collection</span>
-            <span>
+            <span className="uzunlik">Collection</span>
+            <span className="uzunlik">
               Showing {startIndex}-{endIndex} of {selectedCategory.length}
             </span>
           </div>

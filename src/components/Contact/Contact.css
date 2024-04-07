@@ -22,7 +22,6 @@
     flex-direction: column;
     width: 40%;
     gap: 2rem;
-    align-items: flex-start;
 }
 .form-items .form-title{
     font-size: 2.5rem;
@@ -91,4 +90,130 @@
 .contact-card .contact-text{
     font-size: 20px;
     color: #555;
+}
+
+@media screen and  (max-width:1200px) {
+    .contact-container{
+        margin-top: 50px;
+    }
+    .contact-container .container{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .contact-form{
+        /* flex-direction: column; */
+        gap: 2rem;
+        padding: 20px;
+    }
+    .form-items{
+        width: 45%;
+    }
+    .form-items .form-title{
+        font-size: 2rem;
+    }
+    .form-input,.form-textarea{
+        padding: 15px;
+    }
+    .iframe-container{
+        width: 50%;
+    }
+    .iframe-container iframe{
+        height: 400px;
+    }    
+}
+@media screen and  (max-width:1000px) {
+    .contact-form{
+        /* flex-direction: column; */
+    }
+    .form-items{
+        width: 100%;
+    }
+    .form-items .form-title{
+        font-size: 1.5rem;
+    }
+    .sub-btns .sub-btn{
+        width: 100px;
+        font-size: 0.8rem;
+    }
+    .iframe-container{
+        width: 100%;
+    }
+    .iframe-container iframe{
+        height: 350px;
+    }
+    .contact-cards{
+        gap: 2rem;
+    }
+    .contact-card{
+        gap: 1rem;
+    }
+    .contact-card .contact-icon{
+        font-size: 2rem;
+    }
+    .contact-card:nth-child(2) .contact-texts{
+        gap: 5px;
+    }
+    .contact-card .contact-text{
+        font-size: 15px;
+    }
+}
+@media screen and  (max-width:800px) {
+    .contact-container{
+        margin-top: 40px;
+    }
+    .contact-container .container{
+        gap: 2rem;
+    }
+    .contact-form{
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .form-items .form-title{
+        font-size: 1.2rem;
+    }
+    .sub-btns .sub-btn{
+        width: 100%;
+        padding: 15px 0;
+        font-size: 0.7rem;
+    }
+    .iframe-container iframe{
+        height: 300px;
+    }
+    .contact-card .contact-icon{
+        font-size: 1.5rem;
+    }
+    .contact-card:nth-child(2) .contact-texts{
+        gap: 3px;
+    }
+    .contact-card .contact-text{
+        font-size: 12px;
+    }
+}
+@media screen and  (max-width:700px) {
+
+}
+@media screen and  (max-width:500px) {
+    .contact-cards{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and  (max-width:400px) {
+    .contact-card .contact-icon{
+        font-size: 1.2rem;
+    }
+    .contact-card .contact-text{
+        font-size: 10px;
+    }
+    .iframe-container iframe{
+        height: 250px;
+    }
+}
+@media screen and  (max-width:320px) {
+    .contact-container{
+        margin-top: 10px;
+    }
+    .contact-card .contact-text{
+        font-size: 8px;
+    }
 }

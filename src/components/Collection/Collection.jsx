@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Collection.css";
 import { FaChevronDown, FaChevronRight, FaSearch } from "react-icons/fa";
 import CollectionData from "../../Data/ProductData";
-import { FaArrowLeftLong,FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import ProductDetails from "../ProductDetails/ProductDetails";
 
@@ -12,37 +12,37 @@ const Collection = () => {
   const [endIndex, setEndIndex] = useState(16);
   const [currentPage, setCurrentPage] = useState(0);
   const [selectedCollection, setSelectedCollection] = useState(null);
-  const [searchCollection,setSearchCollection] = useState("")
-  const [filteredCollection, setFilteredCollection] = useState(CollectionData)
-  const navigate = useNavigate()
+  const [searchCollection, setSearchCollection] = useState("");
+  const [filteredCollection, setFilteredCollection] = useState(CollectionData);
+  const navigate = useNavigate();
 
   const handleNextPage = () => {
     if (endIndex + 16 <= CollectionData.length) {
-        setStartIndex(prev => prev + 16);
-        setEndIndex(prev => prev + 16);
-        setCurrentPage(prev => prev + 1);
-    }else{
-        setStartIndex(CollectionData.length - 16);
-        setEndIndex(CollectionData.length);
+      setStartIndex((prev) => prev + 16);
+      setEndIndex((prev) => prev + 16);
+      setCurrentPage((prev) => prev + 1);
+    } else {
+      setStartIndex(CollectionData.length - 16);
+      setEndIndex(CollectionData.length);
     }
-};
+  };
 
-const handleBackPage = () => {
+  const handleBackPage = () => {
     if (startIndex - 16 >= 1) {
-        setStartIndex(prev => prev - 16);
-        setEndIndex(prev => prev - 16);
-        setCurrentPage(prev => prev - 1);
-    }else{
-        setStartIndex(1);
-        setEndIndex(16);
+      setStartIndex((prev) => prev - 16);
+      setEndIndex((prev) => prev - 16);
+      setCurrentPage((prev) => prev - 1);
+    } else {
+      setStartIndex(1);
+      setEndIndex(16);
     }
-};
+  };
 
-if (currentPage < 0) {
+  if (currentPage < 0) {
     setCurrentPage(0);
     setStartIndex(1);
     setEndIndex(16);
-}
+  }
 
   const handleShowCategoryClick = () => {
     setShowCategory(!showCategory);
@@ -52,21 +52,21 @@ if (currentPage < 0) {
     setSelectedCollection((prev) => (prev = collection));
     navigate(`/product/${collection.name}`);
     console.log(collection);
-    window.scrollTo({top:0})
-  }
-// qidiruv uchun
+    window.scrollTo({ top: 0 });
+  };
+  // qidiruv uchun
 
   const handleSearchChange = (e) => {
-    const searchText = e.target.value.toLowerCase()
-    setSearchCollection(searchText)
-    const filtered = CollectionData.filter((item) => 
-    item.name.toLocaleLowerCase().includes(searchText)
-    )
-    setFilteredCollection(filtered)
-  }
+    const searchText = e.target.value.toLowerCase();
+    setSearchCollection(searchText);
+    const filtered = CollectionData.filter((item) =>
+      item.name.toLocaleLowerCase().includes(searchText)
+    );
+    setFilteredCollection(filtered);
+  };
 
-  if(selectedCollection){
-    return <ProductDetails selectedCollection={selectedCollection} />
+  if (selectedCollection) {
+    return <ProductDetails selectedCollection={selectedCollection} />;
   }
   return (
     <div className="shop-container">
@@ -143,28 +143,30 @@ if (currentPage < 0) {
       <div className="shop-right">
         <div className="shop-right-title">
           <div className="collection-length">
-            <span>Collection</span>
-            <span>
+            <span className="uzunlik">Collection</span>
+            <span className="uzunlik">
               Showing {startIndex}-{endIndex} of {CollectionData.length}
             </span>
           </div>
           <a href="/contact-us">
-          <button className="right-buttons-contact">
-            Contact
-          </button>
+            <button className="right-buttons-contact">Contact</button>
           </a>
         </div>
         <div className="shop-right-cards">
-          {filteredCollection.slice(startIndex - 1, endIndex).map(
-            (collection, ind) => (
-              <div className="shop-right-card" key={ind} onClick={() => handleCollectionClick(collection)}>
+          {filteredCollection
+            .slice(startIndex - 1, endIndex)
+            .map((collection, ind) => (
+              <div
+                className="shop-right-card"
+                key={ind}
+                onClick={() => handleCollectionClick(collection)}
+              >
                 <div className="shop-right-card-img">
                   <img src={collection.img} alt="" />
                 </div>
                 <span className="shop-right-card-text">{collection.name}</span>
               </div>
-            )
-          )}
+            ))}
         </div>
         {/* <div className="shop-right-cards-length">
           <a href="/" className="length-item link-item">
