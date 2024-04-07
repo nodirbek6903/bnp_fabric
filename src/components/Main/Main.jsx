@@ -20,7 +20,6 @@ const Main = () => {
     setSelectedCollection(prev => prev = collection);
     navigate(`/product/${collection.name}`);
     window.scrollTo({top:0})
-    console.log(collection);
   };
 
 

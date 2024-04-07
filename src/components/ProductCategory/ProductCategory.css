@@ -114,6 +114,7 @@
     border-radius: 20px;
     cursor: pointer;
     font-size: 15px;
+    border: none;
 }
 .right-cards{
     width: 100%;

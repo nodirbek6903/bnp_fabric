@@ -16,7 +16,7 @@ const ProductDetails = ({data}) => {
       <div className="selected-cards">
         <div className="selected-card">
           <div className="selected-img">
-            <img src={img} alt="" />
+            <img src={img} className="img" alt="" />
           </div>
           <div className="selected-table">
             <span className="selected-title">{name}</span>
