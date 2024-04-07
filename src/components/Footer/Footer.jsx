@@ -15,11 +15,11 @@ const Footer = () => {
             fabrics for many years for use all over the world.
           </span>
         </div>
-        <div className="footer-card">
+        <div className="footer-card card2">
           <span className="card-title">Menu</span>
           <div className="footer-nav-items">
             <a href="/" className="card-item">
-              home
+              Home
             </a>
             <a href="/about-us" className="card-item">
               About Us
@@ -32,7 +32,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="footer-card">
+        <div className="footer-card card3">
           <span className="card-title">Contacts</span>
           <span className="card-contact-item">Bukhara, st. Alpomysh 80.</span>
           <span className="card-contact-item">Bnpuz@bk.ru</span>

@@ -44,28 +44,28 @@ const Main = () => {
       <div className="main-about">
         <div className="main-about-cards">
           <div className="about-card">
-            <img src={AboutIcon1} alt="" />
+            <img src={AboutIcon1} className="about-img" alt="" />
             <div className="about-texts">
               <span className="about-title">Free shipping</span>
               <p className="about-descr">Free shipping on all orders</p>
             </div>
           </div>
           <div className="about-card">
-            <img src={AboutIcon2} alt="" />
+            <img src={AboutIcon2} className="about-img" alt="" />
             <div className="about-texts">
               <span className="about-title">Return Guarante</span>
               <p className="about-descr">30 day money back</p>
             </div>
           </div>
           <div className="about-card">
-            <img src={AboutIcon3} alt="" />
+            <img src={AboutIcon3} className="about-img" alt="" />
             <div className="about-texts">
               <span className="about-title">Online support 24/7</span>
               <p className="about-descr">Technical support 24/7</p>
             </div>
           </div>
           <div className="about-card">
-            <img src={AboutIcon4} alt="" />
+            <img src={AboutIcon4} className="about-img" alt="" />
             <div className="about-texts">
               <span className="about-title">Secure payment</span>
               <p className="about-descr">All payment methods accepted</p>
@@ -73,7 +73,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div className="winter-collections">
+      <div className="winter-collections fullCollection">
       <div className="main-product">
         <div className="product winter">
           <div className="product-card">
@@ -118,7 +118,7 @@ const Main = () => {
         </div>
       </div>
       </div>
-      <div className="autumn-collections">
+      <div className="autumn-collections fullCollection">
       <div className="main-product">
         <div className="product autumn">
           <div className="product-card">
@@ -163,7 +163,7 @@ const Main = () => {
         </div>
       </div>
       </div>
-      <div className="summer-collections">
+      <div className="summer-collections fullCollection">
       <div className="main-product">
         <div className="product summer">
           <div className="product-card">

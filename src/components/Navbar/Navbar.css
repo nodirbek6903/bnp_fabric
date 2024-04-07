@@ -1,6 +1,7 @@
 .nav-container{
     width: 100%;
     margin: 0 auto;
+    overflow: hidden;
 }
 .nav-container .container{
     max-width: 1560px;
@@ -52,4 +53,117 @@
     font-size: 1rem;
     font-weight: 500;
     margin: 10px 0;
+}
+.bars{
+    display: none;
+}
+.close{
+    display: none;
+}
+@media screen and (max-width:1200px) {
+    .container .nav-logo-items{
+        width: 50%;
+    }
+    .container .languages{
+        width: 100px;
+    }
+}
+@media screen and (max-width:1000px) {
+    .container .nav-logo-items{
+        width: 65%;
+    }
+    .container .languages{
+        width: 80px;
+    }
+}
+@media screen and (max-width:800px) {
+    .container .nav-logo-items{
+        width: 75%;
+    }
+    .container .languages{
+        width: 80px;
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:700px) {
+    .nav-logo-items .nav-items{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+        height: 100vh;
+        width: 30%;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        justify-content: center;
+        align-content: space-evenly;
+        text-align: center;
+    }
+    .nav-logo-items .nav-items.active{
+        display: grid;
+    }
+    .bars{
+        display: block;
+        font-size: 25px;
+    }
+    .close{
+        display: block;
+        font-size: 25px;
+        position: absolute;
+        right: 10px;
+        top: 40px;
+    }
+    .nav-logo-items .nav-items .nav-item{
+        color: #000;
+        font-weight: bold;
+    }
+    .nav-logo-items .nav-items .nav-item.active{
+        color: #888;
+    }
+}
+@media screen and (max-width:500px) {
+    .container .nav-logo-items{
+        width: 50%;
+    }
+    .container .languages{
+        width: 70px;
+        font-size: 12px;
+    }
+    .nav-logo img{
+        width: 130px;
+    }
+    .nav-logo-items .nav-items{
+        width: 40%;
+    }
+}
+@media screen and (max-width:400px) {
+    .container .nav-logo-items{
+        width: 40%;
+    }
+    .container .languages{
+        width: 60px;
+        font-size: 10px;
+    }
+    .nav-logo img{
+        width: 100px;
+    }
+    .bars,.close{
+        font-size: 20px;
+    }
+    .nav-logo-items .nav-items{
+        width: 50%;
+    }
+}
+@media screen and (max-width:320px) {
+    .container .languages{
+        width: 50px;
+        font-size: 8px;
+    }
+    .nav-logo img{
+        width: 80px;
+    }
+    .nav-logo-items .nav-items{
+        width: 60%;
+    }
 }
