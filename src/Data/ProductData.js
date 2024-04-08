@@ -1,1574 +1,524 @@
-import WinterCollection1 from "../images/winter-collection1.jpg";
-import WinterCollection2 from "../images/winter-collection2.jpg";
-import WinterCollection3 from "../images/winter-collection3.jpg";
-import WinterCollection4 from "../images/winter-collection4.jpg";
-import WinterCollection5 from "../images/winter-collection5.jpg";
-import WinterCollection6 from "../images/winter-collection6.jpg";
-import WinterCollection7 from "../images/winter-collection7.jpg";
-import WinterCollection8 from "../images/winter-collection8.jpg";
-import WinterCollection9 from "../images/winter-collection9.jpg";
-import WinterCollection10 from "../images/winter-collection10.jpg";
-import AutumnCollection1 from "../images/autumCollection1.jpg";
-import AutumnCollection2 from "../images/autumCollection2.jpg";
-import AutumnCollection3 from "../images/autumCollection3.jpg";
-import AutumnCollection4 from "../images/autumCollection4.jpg";
-import AutumnCollection5 from "../images/autumCollection5.jpg";
-import AutumnCollection6 from "../images/autumCollection6.jpg";
-import AutumnCollection7 from "../images/autumCollection7.jpg";
-import AutumnCollection8 from "../images/autumCollection8.jpg";
-import AutumnCollection9 from "../images/autumCollection9.jpg";
-import AutumnCollection10 from "../images/autumCollection10.jpg";
-import SummerCollection1 from "../images/SummerCollection1.jpg";
-import SummerCollection2 from "../images/SummerCollection2.jpg";
-import SummerCollection3 from "../images/SummerCollection3.jpg";
-import SummerCollection4 from "../images/SummerCollection4.jpg";
-import SummerCollection5 from "../images/SummerCollection5.jpg";
-import SummerCollection6 from "../images/SummerCollection6.jpg";
-import SummerCollection7 from "../images/SummerCollection7.jpg";
-import SummerCollection8 from "../images/SummerCollection8.jpg";
-import SummerCollection9 from "../images/SummerCollection9.jpg";
-import SummerCollection10 from "../images/SummerCollection10.jpg";
+import WinterCollection1 from "../images/winter-collection1.jpg"
+import WinterCollection2 from "../images/winter-collection2.jpg"
+import WinterCollection3 from "../images/winter-collection3.jpg"
+import WinterCollection4 from "../images/winter-collection4.jpg"
+import WinterCollection5 from "../images/winter-collection5.jpg"
+import WinterCollection6 from "../images/winter-collection6.jpg"
+import WinterCollection7 from "../images/winter-collection7.jpg"
+import WinterCollection8 from "../images/winter-collection8.jpg"
+import WinterCollection9 from "../images/winter-collection9.jpg"
+import WinterCollection10 from "../images/winter-collection10.jpg"
+import AutumnCollection1 from "../images/autumCollection1.jpg"
+import AutumnCollection2 from "../images/autumCollection2.jpg"
+import AutumnCollection3 from "../images/autumCollection3.jpg"
+import AutumnCollection4 from "../images/autumCollection4.jpg"
+import AutumnCollection5 from "../images/autumCollection5.jpg"
+import AutumnCollection6 from "../images/autumCollection6.jpg"
+import AutumnCollection7 from "../images/autumCollection7.jpg"
+import AutumnCollection8 from "../images/autumCollection8.jpg"
+import AutumnCollection9 from "../images/autumCollection9.jpg"
+import AutumnCollection10 from "../images/autumCollection10.jpg"
+import SummerCollection1 from "../images/SummerCollection1.jpg"
+import SummerCollection2 from "../images/SummerCollection2.jpg"
+import SummerCollection3 from "../images/SummerCollection3.jpg"
+import SummerCollection4 from "../images/SummerCollection4.jpg"
+import SummerCollection5 from "../images/SummerCollection5.jpg"
+import SummerCollection6 from "../images/SummerCollection6.jpg"
+import SummerCollection7 from "../images/SummerCollection7.jpg"
+import SummerCollection8 from "../images/SummerCollection8.jpg"
+import SummerCollection9 from "../images/SummerCollection9.jpg"
+import SummerCollection10 from "../images/SummerCollection10.jpg"
 const CollectionData = [
-  {
-    "en": {
-      id: 1,
-      collectionName: "main-collectionName1",
-      name: "Squares",
-      img: WinterCollection1,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 1,
-      collectionName: "main-collectionName1",
-      name: "Квадраты",
-      img: WinterCollection1,
-      productDetails: {
-        material: "100% хлопковый фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 1,
-      collectionName: "main-collectionName1",
-      name: "To'rtburchaklar",
-      img: WinterCollection1,
-      productDetails: {
-        material: "100% pamuk flanel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 2,
-      collectionName: "Winter Collection",
-      name: "Ikat",
-      img: WinterCollection2,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 2,
-      collectionName: "Зимняя коллекция",
-      name: "Икат",
-      img: WinterCollection2,
-      productDetails: {
-        material: "100% хлопковый фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 2,
-      collectionName: "Qish kolleksiyasi",
-      name: "Ikat",
-      img: WinterCollection2,
-      productDetails: {
-        material: "100% pamuk flanel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 3,
-      collectionName: "Winter Collection",
-      name: "Circles",
-      img: WinterCollection3,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 3,
-      collectionName: "Зимняя коллекция",
-      name: "Круги",
-      img: WinterCollection3,
-      productDetails: {
-        material: "100% хлопковый фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 3,
-      collectionName: "Qish kolleksiyasi",
-      name: "Doiralar",
-      img: WinterCollection3,
-      productDetails: {
-        material: "100% pamuk flanel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 4,
-      collectionName: "Winter Collection",
-      name: "Geometry blue",
-      img: WinterCollection4,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 4,
-      collectionName: "Зимняя коллекция",
-      name: "Геометрия синяя",
-      img: WinterCollection4,
-      productDetails: {
-        material: "100% хлопковый фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 4,
-      collectionName: "Qish kolleksiyasi",
-      name: "Geometriya ko'k",
-      img: WinterCollection4,
-      productDetails: {
-        material: "100% pamuk flanel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 5,
-      collectionName: "Winter Collection",
-      name: "Tropical leaves",
-      img: WinterCollection5,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 5,
-      collectionName: "Зимняя коллекция",
-      name: "Тропические листья",
-      img: WinterCollection5,
-      productDetails: {
-        material: "100% хлопковый фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 5,
-      collectionName: "Qish kolleksiyasi",
-      name: "Tropik barglari",
-      img: WinterCollection5,
-      productDetails: {
-        material: "100% pamuk flanel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 6,
-      collectionName: "Winter Collection",
-      name: "Bambi",
-      img: WinterCollection6,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 6,
-      collectionName: "Зимняя коллекция",
-      name: "Бэмби",
-      img: WinterCollection6,
-      productDetails: {
-        material: "100% хлопковый фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 6,
-      collectionName: "Qish kolleksiyasi",
-      name: "Bambi",
-      img: WinterCollection6,
-      productDetails: {
-        material: "100% pamuk flanel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 7,
-      collectionName: "Winter Collection",
-      name: "Byzantium",
-      img: WinterCollection7,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 7,
-      collectionName: "Зимняя коллекция",
-      name: "Византия",
-      img: WinterCollection7,
-      productDetails: {
-        material: "100% хлопковый фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 7,
-      collectionName: "Qish kolleksiyasi",
-      name: "Vizantiya",
-      img: WinterCollection7,
-      productDetails: {
-        material: "100% pamuk flanel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 8,
-      collectionName: "Winter Collection",
-      name: "Evening Garden",
-      img: WinterCollection8,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 8,
-      collectionName: "Зимняя коллекция",
-      name: "Вечерний сад",
-      img: WinterCollection8,
-      productDetails: {
-        material: "100% хлопковый фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 8,
-      collectionName: "Qish kolleksiyasi",
-      name: "Kechki bog'",
-      img: WinterCollection8,
-      productDetails: {
-        material: "100% pamuk flanel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 9,
-      collectionName: "Winter Collection",
-      name: "Feather Marquis",
-      img: WinterCollection9,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 9,
-      collectionName: "Зимняя коллекция",
-      name: "Перо маркиза",
-      img: WinterCollection9,
-      productDetails: {
-        material: "100% хлопковый фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 9,
-      collectionName: "Qish kolleksiyasi",
-      name: "Parvo markizi",
-      img: WinterCollection9,
-      productDetails: {
-        material: "100% pamuk flanel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 10,
-      collectionName: "Winter Collection",
-      name: "Lavender roses",
-      img: WinterCollection10,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 10,
-      collectionName: "Зимняя коллекция",
-      name: "Лавандовые розы",
-      img: WinterCollection10,
-      productDetails: {
-        material: "100% хлопковый фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz":{
-      id: 10,
-      collectionName: "Qish kolleksiyasi",
-      name: "Lavanda gul",
-      img: WinterCollection10,
-      productDetails: {
-        material: "100% pamuk flanel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    }
-  },
-  {
-    "en": {
-      id: 11,
-      collectionName: "Autumn Collection",
-      name: "Safari",
-      img: AutumnCollection1,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 11,
-      collectionName: "Осенняя коллекция",
-      name: "Сафари",
-      img: AutumnCollection1,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 11,
-      collectionName: "Kuz kolleksiyasi",
-      name: "Safari",
-      img: AutumnCollection1,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 12,
-      collectionName: "Autumn Collection",
-      name: "Multicolored amethyst",
-      img: AutumnCollection2,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 12,
-      collectionName: "Осенняя коллекция",
-      name: "Многоцветный аметист",
-      img: AutumnCollection2,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 12,
-      collectionName: "Kuz kolleksiyasi",
-      name: "Ko'krak rangli ametist",
-      img: AutumnCollection2,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 13,
-      collectionName: "Autumn Collection",
-      name: "Stucco ornament",
-      img: AutumnCollection3,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 13,
-      collectionName: "Осенняя коллекция",
-      name: "Стукко орнамент",
-      img: AutumnCollection3,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 13,
-      collectionName: "Kuz kolleksiyasi",
-      name: "Stukko bezak",
-      img: AutumnCollection3,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 14,
-      collectionName: "Autumn Collection",
-      name: "Emerald (AB)",
-      img: AutumnCollection4,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 14,
-      collectionName: "Осенняя коллекция",
-      name: "Изумруд (AB)",
-      img: AutumnCollection4,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 14,
-      collectionName: "Kuz kolleksiyasi",
-      name: "Zumrud (AB)",
-      img: AutumnCollection4,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 15,
-      collectionName: "Autumn Collection",
-      name: "Malachite Box",
-      img: AutumnCollection5,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 15,
-      collectionName: "Осенняя коллекция",
-      name: "Малахитовый ящик",
-      img: AutumnCollection5,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 15,
-      collectionName: "Kuz kolleksiyasi",
-      name: "Malahit qutisi",
-      img: AutumnCollection5,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 16,
-      collectionName: "Autumn Collection",
-      name: "Scents of spring",
-      img: AutumnCollection6,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 16,
-      collectionName: "Осенняя коллекция",
-      name: "Ароматы весны",
-      img: AutumnCollection6,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 16,
-      collectionName: "Kuz kolleksiyasi",
-      name: "Bahor ichlari",
-      img: AutumnCollection6,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 17,
-      collectionName: "Autumn Collection",
-      name: "Autumn leaf fall (AB)",
-      img: AutumnCollection7,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 17,
-      collectionName: "Осенняя коллекция",
-      name: "Осенний опад (AB)",
-      img: AutumnCollection7,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 17,
-      collectionName: "Kuz kolleksiyasi",
-      name: "Kuzni yapraklar (AB)",
-      img: AutumnCollection7,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 18,
-      collectionName: "Autumn Collection",
-      name: "Blue Breeze (AB)",
-      img: AutumnCollection8,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 18,
-      collectionName: "Осенняя коллекция",
-      name: "Голубая прохлада (AB)",
-      img: AutumnCollection8,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 18,
-      collectionName: "Kuz kolleksiyasi",
-      name: "Ko'k eshigi (AB)",
-      img: AutumnCollection8,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 19,
-      collectionName: "Autumn Collection",
-      name: "Water Blue (AB)",
-      img: AutumnCollection9,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 19,
-      collectionName: "Осенняя коллекция",
-      name: "Водяной голубь (AB)",
-      img: AutumnCollection9,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 19,
-      collectionName: "Kuz kolleksiyasi",
-      name: "Suv kovushi (AB)",
-      img: AutumnCollection9,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 20,
-      collectionName: "Autumn Collection",
-      name: "Plaid",
-      img: AutumnCollection10,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 20,
-      collectionName: "Осенняя коллекция",
-      name: "Плед",
-      img: AutumnCollection10,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 20,
-      collectionName: "Kuz kolleksiyasi",
-      name: "Plaid",
-      img: AutumnCollection10,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 21,
-      collectionName: "Summer Collection",
-      name: "Vintage Style",
-      img: SummerCollection1,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 21,
-      collectionName: "Летняя коллекция",
-      name: "Винтажный стиль",
-      img: SummerCollection1,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 21,
-      collectionName: "Yoz kolleksiyasi",
-      name: "Vintage stil",
-      img: SummerCollection1,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 22,
-      collectionName: "Summer Collection",
-      name: "Fluttering dandelion",
-      img: SummerCollection2,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 22,
-      collectionName: "Летняя коллекция",
-      name: "Летучий одуванчик",
-      img: SummerCollection2,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 22,
-      collectionName: "Yoz kolleksiyasi",
-      name: "Parlog' to'xtab",
-      img: SummerCollection2,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 23,
-      collectionName: "Summer Collection",
-      name: "French Riviera",
-      img: SummerCollection3,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 23,
-      collectionName: "Летняя коллекция",
-      name: "Французская Ривьера",
-      img: SummerCollection3,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 23,
-      collectionName: "Yoz kolleksiyasi",
-      name: "Fransuz Rivyerasi",
-      img: SummerCollection3,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 24,
-      collectionName: "Summer Collection",
-      name: "Dolly the Sleep",
-      img: SummerCollection4,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 24,
-      collectionName: "Летняя коллекция",
-      name: "Соня",
-      img: SummerCollection4,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 24,
-      collectionName: "Yoz kolleksiyasi",
-      name: "Uxlashqach",
-      img: SummerCollection4,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 25,
-      collectionName: "Summer Collection",
-      name: "Alpine herbs",
-      img: SummerCollection5,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 25,
-      collectionName: "Летняя коллекция",
-      name: "Альпийские травы",
-      img: SummerCollection5,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 25,
-      collectionName: "Yoz kolleksiyasi",
-      name: "Alpin o'tlar",
-      img: SummerCollection5,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 26,
-      collectionName: "Summer Collection",
-      name: "Inspirational",
-      img: SummerCollection6,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 26,
-      collectionName: "Летняя коллекция",
-      name: "Вдохновение",
-      img: SummerCollection6,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 26,
-      collectionName: "Yoz kolleksiyasi",
-      name: "Muxlislik",
-      img: SummerCollection6,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 27,
-      collectionName: "Summer Collection",
-      name: "Green lotus",
-      img: SummerCollection7,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 27,
-      collectionName: "Летняя коллекция",
-      name: "Зеленый лотос",
-      img: SummerCollection7,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 27,
-      collectionName: "Yoz kolleksiyasi",
-      name: "Yashil lotos",
-      img: SummerCollection7,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 28,
-      collectionName: "Summer Collection",
-      name: "Mountain cornflower",
-      img: SummerCollection8,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 28,
-      collectionName: "Летняя коллекция",
-      name: "Горный василек",
-      img: SummerCollection8,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 28,
-      collectionName: "Yoz kolleksiyasi",
-      name: "Tog'li qattiq",
-      img: SummerCollection8,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 29,
-      collectionName: "Summer Collection",
-      name: "Sakura branch",
-      img: SummerCollection9,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 29,
-      collectionName: "Летняя коллекция",
-      name: "Ветка сакуры",
-      img: SummerCollection9,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 29,
-      collectionName: "Yoz kolleksiyasi",
-      name: "Sakura filiali",
-      img: SummerCollection9,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 30,
-      collectionName: "Summer Collection",
-      name: "Olive branch",
-      img: SummerCollection10,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 30,
-      collectionName: "Летняя коллекция",
-      name: "Ветвь оливы",
-      img: SummerCollection10,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 30,
-      collectionName: "Yoz kolleksiyasi",
-      name: "Zaytun filiali",
-      img: SummerCollection10,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 31,
-      collectionName: "Spring Collection",
-      name: "Olive branch",
-      img: SummerCollection10,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 31,
-      collectionName: "Весенняя коллекция",
-      name: "Ветвь оливы",
-      img: SummerCollection10,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 31,
-      collectionName: "Bahor mahsulotlar to'plami",
-      name: "Zaytun filiali",
-      img: SummerCollection10,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 32,
-      collectionName: "Spring Collection",
-      name: "Olive branch",
-      img: SummerCollection10,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 32,
-      collectionName: "Весенняя коллекция",
-      name: "Ветвь оливы",
-      img: SummerCollection10,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 32,
-      collectionName: "Bahor mahsulotlar to'plami",
-      name: "Zaytun filiali",
-      img: SummerCollection10,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 33,
-      collectionName: "Spring Collection",
-      name: "Olive branch",
-      img: SummerCollection10,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 33,
-      collectionName: "Весенняя коллекция",
-      name: "Ветвь оливы",
-      img: SummerCollection10,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 33,
-      collectionName: "Bahor mahsulotlar to'plami",
-      name: "Zaytun filiali",
-      img: SummerCollection10,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 34,
-      collectionName: "Spring Collection",
-      name: "Olive branch",
-      img: SummerCollection10,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 34,
-      collectionName: "Весенняя коллекция",
-      name: "Ветвь оливы",
-      img: SummerCollection10,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 34,
-      collectionName: "Bahor mahsulotlar to'plami",
-      name: "Zaytun filiali",
-      img: SummerCollection10,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-  {
-    "en": {
-      id: 35,
-      collectionName: "Spring Collection",
-      name: "Olive branch",
-      img: SummerCollection10,
-      productDetails: {
-        material: "100% cotton flannel",
-        pillow_case: "50x70 cm (2 pcs.)",
-        bed_sheet: "260×280 cm (1 piece)",
-        duvet_cover: "160x220 cm (2 pcs.)",
-        size: "Special size",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "ru": {
-      id: 35,
-      collectionName: "Весенняя коллекция",
-      name: "Ветвь оливы",
-      img: SummerCollection10,
-      productDetails: {
-        material: "100% хлопковая фланель",
-        pillow_case: "50x70 см (2 шт.)",
-        bed_sheet: "260×280 см (1 шт.)",
-        duvet_cover: "160x220 см (2 шт.)",
-        size: "Специальный размер",
-        manufacturer: "Bukhara Natural Product",
-      },
-    },
-    "uz": {
-      id: 35,
-      collectionName: "Bahor mahsulotlar to'plami",
-      name: "Zaytun filiali",
-      img: SummerCollection10,
-      productDetails: {
-        material: "100% pamuk flannel",
-        pillow_case: "50x70 sm (2 ta)",
-        bed_sheet: "260×280 sm (1 ta)",
-        duvet_cover: "160x220 sm (2 ta)",
-        size: "Maxsus o'lcham",
-        manufacturer: "Buxoro Natural Product",
-      },
-    },
-  },
-];
+    {
+        id:1,
+        collectionName:"main-collectionName1",
+        name:"product-name1",
+        img: WinterCollection1,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:2,
+        collectionName:"main-collectionName1",
+        name:"product-name2",
+        img: WinterCollection2,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:3,
+        collectionName:"main-collectionName1",
+        name:"product-name3",
+        img:WinterCollection3,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:4,
+        collectionName:"main-collectionName1",
+        name:"product-name4",
+        img: WinterCollection4,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:5,
+        collectionName:"main-collectionName1",
+        name:"product-name5",
+        img: WinterCollection5,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:6,
+        collectionName:"main-collectionName1",
+        name:"product-name6",
+        img: WinterCollection6,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:7,
+        collectionName:"main-collectionName1",
+        name:"product-name7",
+        img: WinterCollection7,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:8,
+        collectionName:"main-collectionName1",
+        name:"product-name8",
+        img: WinterCollection8,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:9,
+        collectionName:"main-collectionName1",
+        name:"product-name9",
+        img: WinterCollection9,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:10,
+        collectionName:"main-collectionName1",
+        name:"product-name10",
+        img: WinterCollection10,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:11,
+        collectionName:"main-collectionName2",
+        name:"product-name11",
+        img:AutumnCollection1,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:12,
+        collectionName:"main-collectionName2",
+        name: "product-name12",
+        img:AutumnCollection2,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:13,
+        collectionName:"main-collectionName2",
+        name:"product-name13",
+        img:AutumnCollection3,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:14,
+        collectionName:"main-collectionName2",
+        name:"product-name14",
+        img:AutumnCollection4,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:15,
+        collectionName:"main-collectionName2",
+        name:"product-name15",
+        img:AutumnCollection5,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:16,
+        collectionName:"main-collectionName2",
+        name:"product-name16",
+        img:AutumnCollection6,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:17,
+        collectionName:"main-collectionName2",
+        name:"product-name17",
+        img:AutumnCollection7,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:18,
+        collectionName:"main-collectionName2",
+        name:"product-name18",
+        img:AutumnCollection8,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:19,
+        collectionName:"main-collectionName2",
+        name:"product-name19",
+        img:AutumnCollection9,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:20,
+        collectionName:"main-collectionName2",
+        name:"product-name20",
+        img:AutumnCollection10,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:21,
+        collectionName: "main-collectionName3",
+        name:"product-name21",
+        img:SummerCollection1,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:22,
+        collectionName: "main-collectionName3",
+        name:"product-name22",
+        img:SummerCollection2,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:23,
+        collectionName: "main-collectionName3",
+        name:"product-name23",
+        img:SummerCollection3,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:24,
+        collectionName: "main-collectionName3",
+        name:"product-name24",
+        img:SummerCollection4,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:25,
+        collectionName: "main-collectionName3",
+        name:"product-name25",
+        img:SummerCollection5,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:26,
+        collectionName: "main-collectionName3",
+        name:"product-name26",
+        img:SummerCollection6,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:27,
+        collectionName: "main-collectionName3",
+        name:"product-name27",
+        img:SummerCollection7,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:28,
+        collectionName: "main-collectionName3",
+        name:"product-name28",
+        img:SummerCollection8,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:29,
+        collectionName: "main-collectionName3",
+        name:"product-name29",
+        img:SummerCollection9,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:30,
+        collectionName: "main-collectionName3",
+        name:"",
+        img:SummerCollection10,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:31,
+        collectionName: "main-collectionName4",
+        name:"product-name30",
+        img:SummerCollection10,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:32,
+        collectionName: "main-collectionName4",
+        name:"product-name30",
+        img:SummerCollection10,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:33,
+        collectionName: "main-collectionName4",
+        name:"product-name30",
+        img:SummerCollection10,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:34,
+        collectionName: "main-collectionName4",
+        name:"product-name30",
+        img:SummerCollection10,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+    {
+        id:35,
+        collectionName: "main-collectionName4",
+        name:"product-name30",
+        img:SummerCollection10,
+        productDetails: {
+            material:"100% cotton flannel",
+            pillow_case: "50x70 cm (2 pcs.)",
+            bed_sheet: "260×280 cm (1 piece)",
+            duvet_cover:"160x220 cm (2 pcs.)",
+            size:"Special size",
+            manufacturer: "Bukhara Natural Product"
+        }
+    },
+]
 
-export default CollectionData;
+export  default CollectionData

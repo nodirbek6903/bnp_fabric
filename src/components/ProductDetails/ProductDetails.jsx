@@ -3,16 +3,15 @@ import { useParams } from "react-router-dom"
 import "./ProductDetails.css"
 import { useTranslation } from "react-i18next"
 
-const ProductDetails = ({data,language}) => {
+const ProductDetails = ({data}) => {
   const {name} = useParams()
-  const selectedCollection = data.find(collection => collection[language].name)
+  const selectedCollection = data.find(collection => collection.name)
   const {t} = useTranslation()
-  // const 
 
   if(!selectedCollection){
     return <div>Loading...</div>
   }
-  const {img,productDetails,collectionName} = selectedCollection[language]
+  const {img,productDetails,collectionName} = selectedCollection
   
   return (
     <div className='selected-container'>

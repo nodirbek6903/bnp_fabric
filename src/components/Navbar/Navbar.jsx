@@ -3,9 +3,9 @@ import "./Navbar.css";
 import NavLogo from "../../images/nav-logo.png";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
 
-<<<<<<< HEAD
-const Navbar = ({ changeLanguage, language }) => { 
+const Navbar = () => { 
   const [showNavbar, setShowNavbar] = useState(false);
   const { t, i18n } = useTranslation();
 
@@ -16,18 +16,9 @@ const Navbar = ({ changeLanguage, language }) => {
   const handleChangeLanguage = (e) => {
     const selectedLanguage = e.target.value;
     i18n.changeLanguage(selectedLanguage);
-    changeLanguage(selectedLanguage);
   };
 
   const location = useLocation();
-=======
-const Navbar = () => {
-  const [showNavbar,setShowNavbar] = useState(false)
-
-  const handleClickNav = () => {
-    setShowNavbar(!showNavbar)
-  }
->>>>>>> parent of 3bb7cb6 (language 50% added)
 
   return (
     <div className="nav-container">
@@ -40,7 +31,6 @@ const Navbar = () => {
           </div>
           <div className={`nav-items ${showNavbar ? "active" : ""}`}>
             <FaTimes className="close" onClick={handleClickNav} />
-<<<<<<< HEAD
             <Link
               to="/"
               onClick={handleClickNav}
@@ -82,7 +72,6 @@ const Navbar = () => {
         <select
           className="languages"
           onChange={handleChangeLanguage}
-          value={language} // Tilni tanlangan holatga solish
           name="language"
           id=""
         >
@@ -91,28 +80,6 @@ const Navbar = () => {
           <option value="uz">O'zbek</option>
         </select>
         <FaBars className="bars" onClick={handleClickNav} />
-=======
-            <Link to="/" onClick={handleClickNav} className={`nav-item ${location.pathname==="/" ? "active" : ""}`}>
-              Home
-            </Link>
-            <Link to="/shop" onClick={handleClickNav} className={`nav-item ${location.pathname==="/shop" ? "active" : ""}`}>
-              Collection
-            </Link>
-            <Link to="/about-us" onClick={handleClickNav} className={`nav-item ${location.pathname==="/about-us" ? "active" : ""}`}>
-              About Us
-            </Link>
-            <Link to="/contact-us" onClick={handleClickNav} className={`nav-item ${location.pathname==="/contact-us" ? "active" : ""}`}>
-              Contacts
-            </Link>
-          </div>
-        </div>
-          <select className="languages" name="language" id="">
-            <option value="en">English</option>
-            <option value="ru">Russian</option>
-            <option value="uz">O'zbek</option>
-          </select>
-          <FaBars className="bars" onClick={handleClickNav} />
->>>>>>> parent of 3bb7cb6 (language 50% added)
       </div>
     </div>
   );
