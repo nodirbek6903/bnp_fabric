@@ -4,27 +4,23 @@ import { FaChevronDown, FaChevronRight, FaSearch } from "react-icons/fa";
 import CollectionData from "../../Data/ProductData";
 import { useNavigate } from "react-router-dom";
 import ProductDetails from "../ProductDetails/ProductDetails";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 const Collection = () => {
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [showCategory, setShowCategory] = useState(false);
   const [selectedCollection, setSelectedCollection] = useState(null);
   const [searchCollection, setSearchCollection] = useState("");
-  const [filteredCollection, setFilteredCollection] = useState(
-    CollectionData.filter((item) => item)
-  );
-
+  const [filteredCollection, setFilteredCollection] = useState(CollectionData);
 
   const handleShowCategoryClick = () => {
     setShowCategory(!showCategory);
   };
 
   const handleCollectionClick = (collection) => {
-    setSelectedCollection((prev) => (prev = collection));
-    navigate(`/product/${collection.name}`);
-    console.log(collection);
+    setSelectedCollection(collection);
+    navigate(`/product-category/${t(collection.name)}`);
     window.scrollTo({ top: 0 });
   };
 
@@ -32,10 +28,23 @@ const Collection = () => {
     const searchText = e.target.value.toLowerCase();
     setSearchCollection(searchText);
     const filtered = CollectionData.filter((item) =>
-      item.name.toLowerCase().includes(searchText)
+      t(item.name).toLowerCase().includes(searchText)
     );
     setFilteredCollection(filtered);
   };
+
+  const handleItem1 = () => {
+    navigate(`/product-category/${t("main-collectionName2")}`)
+  }
+  const handleItem2 = () => {
+    navigate(`/product-category/${t("main-collectionName4")}`)
+  }
+  const handleItem3 = () => {
+    navigate(`/product-category/${t("main-collectionName1")}`)
+  }
+  const handleItem4 = () => {
+    navigate(`/product-category/${t("main-collectionName3")}`)
+  }
 
   if (selectedCollection) {
     return <ProductDetails selectedCollection={selectedCollection} />;
@@ -47,7 +56,7 @@ const Collection = () => {
         <div className="search-container">
           <input
             type="text"
-            placeholder="Search here"
+            placeholder="Bu yerda qidirish"
             className="search-input"
             value={searchCollection}
             onChange={handleSearchChange}
@@ -59,7 +68,7 @@ const Collection = () => {
         </div>
         <div className="shop-left-dropdown">
           <div className="shop-left-title" onClick={handleShowCategoryClick}>
-            <span className="title-collection">Collection</span>
+            <span className="title-collection">{t("nav-item2")}</span>
             {showCategory ? (
               <FaChevronDown className="icon-collection" />
             ) : (
@@ -67,66 +76,57 @@ const Collection = () => {
             )}
           </div>
           <div className={`shop-left-items ${showCategory ? "active" : ""}`}>
-                        {CollectionData.find(
-              (item) => item.collectionName === "Spring Collection"
-            ) && (
-              <a
-                href={`/product-category/Spring Collection`}
-                className="shop-left-link"
-              >
-                {t("main-collectionName4")}
-              </a>
-            )}
-
-            {CollectionData.find(
-              (item) => item.collectionName === "Winter Collection"
-            ) && (
-              <a
-                href={`/product-category/Winter Collection`}
-                className="shop-left-link"
-              >
-                {t("main-collectionName1")}
-              </a>
-            )}
-
-            {CollectionData.find(
-              (item) => item.collectionName === "Summer Collection"
-            ) && (
-              <a
-                href={`/product-category/Summer Collection`}
-                className="shop-left-link"
-              >
-                {t("main-collectionName3")}
-              </a>
-            )}
+          <a
+              className="shop-left-link"
+              onClick={handleItem1}
+            >
+              {t("main-collectionName2")}
+            </a>
+            <a
+              className="shop-left-link"
+              onClick={handleItem2}
+            >
+              {t("main-collectionName4")}
+            </a>
+            <a
+              className="shop-left-link"
+              onClick={handleItem3}
+            >
+              {t("main-collectionName1")}
+            </a>
+            <a
+              className="shop-left-link"
+              onClick={handleItem4}
+            >
+              {t("main-collectionName3")}
+            </a>
           </div>
         </div>
       </div>
       <div className="shop-right">
         <div className="shop-right-title">
           <div className="collection-length">
-            <span className="uzunlik">Collection</span>
+            <span className="uzunlik">{t("nav-item2")}</span>
           </div>
           <a href="/contact-us">
-            <button className="right-buttons-contact">{t("contact-title")}</button>
+            <button className="right-buttons-contact">
+              {t("contact-title")}
+            </button>
           </a>
         </div>
         <div className="shop-right-cards">
-          {filteredCollection
-            .map((collection, ind) => (
-              <div
-                className="shop-right-card"
-                key={ind}
-                onClick={() => handleCollectionClick(collection)}
-              >
-                <div className="shop-right-card-img">
-                  <img src={collection.img} alt="" />
-                </div>
-                <span className="shop-right-card-text">
-                  {collection.name}
-                </span>
+          {filteredCollection.map((collection, index) => (
+            <div
+              className="shop-right-card"
+              key={index}
+              onClick={() => handleCollectionClick(collection)}
+            >
+              <div className="shop-right-card-img">
+                <img src={collection.img} alt="" />
               </div>
-            ))}
+              <span className="shop-right-card-text">{t(collection.name)}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./ProductCategory.css";
 import { FaChevronRight, FaSearch, FaChevronDown } from "react-icons/fa";
 import { useNavigate, useParams } from "react-router-dom";
@@ -9,17 +9,21 @@ const ProductCategory = ({ data }) => {
   const [showCategory, setShowCategory] = useState(false);
   const { collectionName } = useParams();
   const { t } = useTranslation();
-  const selectedCategory = data.filter(
-    (category) => category.collectionName === collectionName
+  const [filteredCollection, setFilteredCollection] = useState(
+    data.filter((item) => t(item.collectionName) === collectionName)
   );
-  const [filteredCollection, setFilteredCollection] = useState(selectedCategory);
   const [searchCollection, setSearchCollection] = useState("");
   const navigate = useNavigate();
 
-  console.log(selectedCategory);
+  useEffect(() => {
+    const selectedCategory = data.filter(
+      (category) => t(category.collectionName) === collectionName
+    );
+    setFilteredCollection(selectedCategory);
+  }, [collectionName]);
 
   const handleClickProduct = (category) => {
-    navigate(`/product/${category.name}`);
+    navigate(`/product/${t(category.name)}`);
     window.scrollTo({ top: 0 });
     console.log(category);
   };
@@ -28,14 +32,23 @@ const ProductCategory = ({ data }) => {
     const searchText = e.target.value.toLowerCase();
     setSearchCollection(searchText);
     const filtered = CollectionData.filter((item) =>
-      item.name.toLowerCase().includes(searchText)
+      t(item.name).toLowerCase().includes(searchText)
     );
     setFilteredCollection(filtered);
   };
 
-  if (!selectedCategory) {
-    <div>Loading...</div>;
-  }
+  const handleItem1 = () => {
+    navigate(`/product-category/${t("main-collectionName2")}`);
+  };
+  const handleItem2 = () => {
+    navigate(`/product-category/${t("main-collectionName4")}`);
+  };
+  const handleItem3 = () => {
+    navigate(`/product-category/${t("main-collectionName1")}`);
+  };
+  const handleItem4 = () => {
+    navigate(`/product-category/${t("main-collectionName3")}`);
+  };
 
   const handlShowCategory = () => {
     setShowCategory(!showCategory);
@@ -58,7 +71,7 @@ const ProductCategory = ({ data }) => {
         </div>
         <div className="category-dropdown">
           <div className="category-title" onClick={handlShowCategory}>
-            <span className="title-collection">Collection</span>
+            <span className="title-collection">{t("nav-item2")}</span>
             {showCategory ? (
               <FaChevronDown className="icon-collection" />
             ) : (
@@ -66,29 +79,17 @@ const ProductCategory = ({ data }) => {
             )}
           </div>
           <div className={`category-items ${showCategory ? "active" : null}`}>
-            <a
-              href={`/product-category/${t("main-collectionName2")}`}
-              className="category-link"
-            >
-              <span className="category-item">Autumn Collection</span>
+            <a className="category-link" onClick={handleItem1}>
+              <span className="category-item">{t("main-collectionName2")}</span>
             </a>
-            <a
-              href={`/product-category/${t("main-collectionName4")}`}
-              className="category-link"
-            >
-              <span className="category-item">Spring Collection</span>
+            <a className="category-link" onClick={handleItem2}>
+              <span className="category-item">{t("main-collectionName4")}</span>
             </a>
-            <a
-              href={`/product-category/${t("main-collectionName1")}`}
-              className="category-link"
-            >
-              <span className="category-item">Winter Collection</span>
+            <a className="category-link" onClick={handleItem3}>
+              <span className="category-item">{t("main-collectionName1")}</span>
             </a>
-            <a
-              href={`/product-category/${t("main-collectionName3")}`}
-              className="category-link"
-            >
-              <span className="category-item">Summer Collection</span>
+            <a className="category-link" onClick={handleItem4}>
+              <span className="category-item">{t("main-collectionName3")}</span>
             </a>
           </div>
         </div>
@@ -114,7 +115,7 @@ const ProductCategory = ({ data }) => {
               <div className="right-card-img">
                 <img src={category.img} alt="" />
               </div>
-              <span className="right-card-text">{category.name}</span>
+              <span className="right-card-text">{t(category.name)}</span>
             </div>
           ))}
         </div>

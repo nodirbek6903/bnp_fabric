@@ -66,6 +66,7 @@
 .category-name a {
   color: #f42c37;
   text-decoration: none;
+  cursor: pointer;
 }
 .category-name a:hover {
   text-decoration: underline;

@@ -17,7 +17,7 @@ const Footer = () => {
           </span>
         </div>
         <div className="footer-card card2">
-          <span className="card-title">{"footer-section1-title1"}</span>
+          <span className="card-title">{t("footer-section1-title1")}</span>
           <div className="footer-nav-items">
             <a href="/" className="card-item">
               {t("nav-item1")}

@@ -438,7 +438,7 @@ const CollectionData = [
     {
         id:30,
         collectionName: "main-collectionName3",
-        name:"",
+        name:"product-name30",
         img:SummerCollection10,
         productDetails: {
             material:"100% cotton flannel",

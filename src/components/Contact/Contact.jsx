@@ -26,7 +26,7 @@ const Contact = () => {
       <div className="container">
         <div className="contact-form">
           <form action="" className="form-items">
-            <h1 className="form-title">{t("conatct-title")}</h1>
+            <h1 className="form-title">{t("contact-title")}</h1>
             <input
               type="email"
               placeholder={t("contact-input1-placeholder")}

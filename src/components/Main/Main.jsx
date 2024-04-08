@@ -111,9 +111,7 @@ const Main = () => {
           <div className="collection-cards">
             {CollectionData.filter(
               (item) =>
-                item.collectionName === "Winter Collection" ||
-                item.collectionName === "Зимняя коллекция" ||
-                item.collectionName === "Qish kolleksiyasi"
+                item.collectionName === "main-collectionName1"
             ).map((collection, ind) => (
               <div
                 className="collection-card"
@@ -166,9 +164,7 @@ const Main = () => {
           <div className="collection-cards">
             {CollectionData.filter(
               (item) =>
-                item.collectionName === "Autumn Collection" ||
-                item.collectionName === "Осенняя коллекция" ||
-                item.collectionName === "Kuz kolleksiyasi"
+                item.collectionName === "main-collectionName2"
             ).map((collection, ind) => (
               <div
                 className="collection-card"
@@ -221,10 +217,7 @@ const Main = () => {
           <div className="collection-cards">
             {CollectionData.filter(
               (item) =>
-                item.collectionName === "Summer Collection" ||
-                item.collectionName ===
-                  "Yoz kolleksiyasi" ||
-                item.collectionName === "Летняя коллекция"
+                item.collectionName === "main-collectionName3"
             ).map((collection, ind) => (
               <div
                 className="collection-card"
