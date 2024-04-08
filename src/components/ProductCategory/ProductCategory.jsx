@@ -4,10 +4,12 @@ import { FaChevronRight, FaSearch, FaChevronDown } from "react-icons/fa";
 import { MdArrowRightAlt } from "react-icons/md";
 import { useNavigate, useParams } from "react-router-dom";
 import ProductDetails from "../ProductDetails/ProductDetails";
+import { useTranslation } from "react-i18next";
 
 const ProductCategory = ({ data }) => {
   const [showCategory, setShowCategory] = useState(false);
   const { collectionName } = useParams();
+  const {t} = useTranslation()
   const selectedCategory = data.filter(
     (category) => category.collectionName === collectionName
   );
@@ -71,7 +73,7 @@ const ProductCategory = ({ data }) => {
         <div className="search-input-container">
           <input
             type="text"
-            placeholder="Search here"
+            placeholder={t("collection-search-placeholder")}
             value={searchCollection}
             onChange={handleSearchChange}
             className="search-input"
@@ -83,7 +85,7 @@ const ProductCategory = ({ data }) => {
         </div>
         <div className="category-dropdown">
           <div className="category-title" onClick={handlShowCategory}>
-            <span className="title-collection">Collection</span>
+            <span className="title-collection">{t("nav-item2")}</span>
             {showCategory ? (
               <FaChevronDown className="icon-collection" />
             ) : (
@@ -95,25 +97,25 @@ const ProductCategory = ({ data }) => {
               href={`/product-category/Autumn Collection`}
               className="category-link"
             >
-              <span className="category-item">Autumn Collection</span>
+              <span className="category-item">{t("main-collectionName2")}</span>
             </a>
             <a
               href={`/product-category/Spring Collection`}
               className="category-link"
             >
-              <span className="category-item">Spring Collection</span>
+              <span className="category-item">{t("main-collectionName4")}</span>
             </a>
             <a
               href={`/product-category/Winter Collection`}
               className="category-link"
             >
-              <span className="category-item">Winter Collection</span>
+              <span className="category-item">{t("main-collectionName1")}</span>
             </a>
             <a
               href={`/product-category/Summer Collection`}
               className="category-link"
             >
-              <span className="category-item">Summer Collection</span>
+              <span className="category-item">{t("main-collectionName3")}</span>
             </a>
           </div>
         </div>
@@ -121,14 +123,14 @@ const ProductCategory = ({ data }) => {
       <div className="category-right">
         <div className="right-title">
           <div className="collection-length">
-            <span className="uzunlik">Collection</span>
+            <span className="uzunlik">{t("nav-item2")}</span>
             <span className="uzunlik">
               Showing {startIndex}-{endIndex} of {selectedCategory.length}
             </span>
           </div>
           <a href="/contact-us">
           <button className="right-buttons-contact">
-            Contact
+          {t("contact-title")}
           </button>
           </a>
         </div>

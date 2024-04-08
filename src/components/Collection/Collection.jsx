@@ -5,6 +5,7 @@ import CollectionData from "../../Data/ProductData";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import ProductDetails from "../ProductDetails/ProductDetails";
+import { useTranslation } from "react-i18next";
 
 const Collection = () => {
   const [showCategory, setShowCategory] = useState(false);
@@ -15,6 +16,7 @@ const Collection = () => {
   const [searchCollection, setSearchCollection] = useState("");
   const [filteredCollection, setFilteredCollection] = useState(CollectionData);
   const navigate = useNavigate();
+  const {t} = useTranslation()
 
   const handleNextPage = () => {
     if (endIndex + 16 <= CollectionData.length) {
@@ -74,7 +76,7 @@ const Collection = () => {
         <div className="search-container">
           <input
             type="text"
-            placeholder="Search here"
+            placeholder={t("collection-search-placeholder")}
             className="search-input"
             value={searchCollection}
             onChange={handleSearchChange}
@@ -86,7 +88,7 @@ const Collection = () => {
         </div>
         <div className="shop-left-dropdown">
           <div className="shop-left-title" onClick={handleShowCategoryClick}>
-            <span className="title-collection">Collection</span>
+            <span className="title-collection">{t("nav-item2")}</span>
             {showCategory ? (
               <FaChevronDown className="icon-collection" />
             ) : (
@@ -101,7 +103,7 @@ const Collection = () => {
                 href={`/product-category/Autumn Collection`}
                 className="shop-left-link"
               >
-                Autumn Collection
+                {t("main-collectionName2")}
               </a>
             )}
 
@@ -112,7 +114,7 @@ const Collection = () => {
                 href={`/product-category/Spring Collection`}
                 className="shop-left-link"
               >
-                Spring Collection
+                {t("main-collectionName4")}
               </a>
             )}
 
@@ -123,7 +125,7 @@ const Collection = () => {
                 href={`/product-category/Winter Collection`}
                 className="shop-left-link"
               >
-                Winter Collection
+                {t("main-collectionName1")}
               </a>
             )}
 
@@ -134,7 +136,7 @@ const Collection = () => {
                 href={`/product-category/Summer Collection`}
                 className="shop-left-link"
               >
-                Summer Collection
+                {t("main-collectionName3")}
               </a>
             )}
           </div>
@@ -143,13 +145,14 @@ const Collection = () => {
       <div className="shop-right">
         <div className="shop-right-title">
           <div className="collection-length">
-            <span className="uzunlik">Collection</span>
+            <span className="uzunlik">{t("nav-item2")}</span>
             <span className="uzunlik">
-              Showing {startIndex}-{endIndex} of {CollectionData.length}
+              {/* Showing {startIndex}-{endIndex} of {CollectionData.length} */}
+
             </span>
           </div>
           <a href="/contact-us">
-            <button className="right-buttons-contact">Contact</button>
+            <button className="right-buttons-contact">{t("contact-title")}</button>
           </a>
         </div>
         <div className="shop-right-cards">

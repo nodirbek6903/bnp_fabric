@@ -11,10 +11,12 @@ import Winter from "../../images/main2.png";
 import CollectionData from "./../../Data/ProductData";
 import {useNavigate } from "react-router-dom";
 import ProductDetails from "../ProductDetails/ProductDetails";
+import { useTranslation } from "react-i18next";
 
 const Main = () => {
   const [selectedCollection, setSelectedCollection] = useState(null);
   const navigate = useNavigate();
+  const {t} = useTranslation()
 
   const handleCollectionClick = (collection) => {
     setSelectedCollection(prev => prev = collection);
@@ -35,9 +37,9 @@ const Main = () => {
           <img src={MainImg} alt="" />
         </div>
         <div className="main-texts">
-          <h3 className="main-text">Bukhara</h3>
-          <h2 className="main-text">Natural</h2>
-          <h1 className="main-text">Product</h1>
+          <h3 className="main-text">{t("main-section1-text1")}</h3>
+          <h2 className="main-text">{t("main-section1-text2")}</h2>
+          <h1 className="main-text">{t("main-section1-text3")}</h1>
         </div>
       </div>
       <div className="main-about">
@@ -45,29 +47,29 @@ const Main = () => {
           <div className="about-card">
             <img src={AboutIcon1} className="about-img" alt="" />
             <div className="about-texts">
-              <span className="about-title">Free shipping</span>
-              <p className="about-descr">Free shipping on all orders</p>
+              <span className="about-title">{t("main-section2-card-title1")}</span>
+              <p className="about-descr">{t("main-section2-card-text1")}</p>
             </div>
           </div>
           <div className="about-card">
             <img src={AboutIcon2} className="about-img" alt="" />
             <div className="about-texts">
-              <span className="about-title">Return Guarante</span>
-              <p className="about-descr">30 day money back</p>
+              <span className="about-title">{t("main-section2-card-title2")}</span>
+              <p className="about-descr">{t("main-section2-card-text2")}</p>
             </div>
           </div>
           <div className="about-card">
             <img src={AboutIcon3} className="about-img" alt="" />
             <div className="about-texts">
-              <span className="about-title">Online support 24/7</span>
-              <p className="about-descr">Technical support 24/7</p>
+              <span className="about-title">{t("main-section2-card-title3")}</span>
+              <p className="about-descr">{t("main-section2-card-text3")}</p>
             </div>
           </div>
           <div className="about-card">
             <img src={AboutIcon4} className="about-img" alt="" />
             <div className="about-texts">
-              <span className="about-title">Secure payment</span>
-              <p className="about-descr">All payment methods accepted</p>
+              <span className="about-title">{t("main-section2-card-title4")}</span>
+              <p className="about-descr">{t("main-section2-card-text4")}</p>
             </div>
           </div>
         </div>
@@ -77,20 +79,19 @@ const Main = () => {
         <div className="product winter">
           <div className="product-card">
             <span className="foiz">100%</span>
-            <span className="product-text">Material quality</span>
+            <span className="product-text">{t("main-section-umumiy-card-text1")}</span>
           </div>
           <div className="product-img">
             <img src={Winter} alt="" />
           </div>
           <div className="product-card">
-            <span className="product-title">'Bukhara Natural Product'</span>
+            <span className="product-title">'{t("main-section-umumiy-card-title")}'</span>
             <span className="product-text">
-              has been a company that produces cotton fabrics for use all over
-              the world for many years
+            {t("main-section-umumiy-card-text2")}
             </span>
             <div className="product-btn">
               <a href="/shop" className="btn">
-                Collection
+              {t("main-section-umumiy-card-button")}
               </a>
             </div>
           </div>
@@ -98,8 +99,8 @@ const Main = () => {
       </div>
       <div className="collection">
         <div className="collection-title">
-          <span className="title">Winter Collection</span>
-          <div className="brend-text">Bukhara Natural Product</div>
+          <span className="title">{t("main-collectionName1")}</span>
+          <div className="brend-text">{t("main-brend")}</div>
         </div>
         <div className="collection-cards">
           {CollectionData.filter(item => item.collectionName === "Winter Collection").map((collection, ind) => (
@@ -122,20 +123,19 @@ const Main = () => {
         <div className="product autumn">
           <div className="product-card">
             <span className="foiz">100%</span>
-            <span className="product-text">Material quality</span>
+            <span className="product-text">{t("main-section-umumiy-card-text1")}</span>
           </div>
           <div className="product-img">
             <img src={Autumn} alt="" />
           </div>
           <div className="product-card">
-            <span className="product-title">'Bukhara Natural Product'</span>
+            <span className="product-title">'{t("main-section-umumiy-card-title")}'</span>
             <span className="product-text">
-              has been a company that produces cotton fabrics for use all over
-              the world for many years
+            {t("main-section-umumiy-card-text2")}
             </span>
             <div className="product-btn">
               <a href="/shop" className="btn">
-                Collection
+              {t("main-section-umumiy-card-button")}
               </a>
             </div>
           </div>
@@ -143,8 +143,8 @@ const Main = () => {
       </div>
       <div className="collection">
         <div className="collection-title">
-          <span className="title">Autumn Collection</span>
-          <div className="brend-text">Bukhara Natural Product</div>
+          <span className="title">{t("main-collectionName2")}</span>
+          <div className="brend-text">{t("main-brend")}</div>
         </div>
         <div className="collection-cards">
           {CollectionData.filter(item=> item.collectionName==="Autumn Collection").map((collection, ind) => (
@@ -167,20 +167,19 @@ const Main = () => {
         <div className="product summer">
           <div className="product-card">
             <span className="foiz">100%</span>
-            <span className="product-text">Material quality</span>
+            <span className="product-text">{t("main-section-umumiy-card-text1")}</span>
           </div>
           <div className="product-img">
             <img src={Summer} alt="" />
           </div>
           <div className="product-card">
-            <span className="product-title">'Bukhara Natural Product'</span>
+            <span className="product-title">'{t("main-section-umumiy-card-title")}'</span>
             <span className="product-text">
-              has been a company that produces cotton fabrics for use all over
-              the world for many years
+            {t("main-section-umumiy-card-text2")}
             </span>
             <div className="product-btn">
               <a href="/shop" className="btn">
-                Collection
+              {t("main-section-umumiy-card-button")}
               </a>
             </div>
           </div>
@@ -188,8 +187,8 @@ const Main = () => {
       </div>
       <div className="collection">
         <div className="collection-title">
-          <span className="title">Summer Collection</span>
-          <div className="brend-text">Bukhara Natural Product</div>
+          <span className="title">{t("main-collectionName3")}</span>
+          <div className="brend-text">{t("main-brend")}</div>
         </div>
         <div className="collection-cards">
           {CollectionData.filter(item => item.collectionName==="Summer Collection").map((collection, ind) => (

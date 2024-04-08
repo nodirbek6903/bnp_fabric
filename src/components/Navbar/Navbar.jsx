@@ -3,12 +3,17 @@ import "./Navbar.css";
 import NavLogo from "../../images/nav-logo.png";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [showNavbar,setShowNavbar] = useState(false)
+  const {t,i18n} = useTranslation()
 
   const handleClickNav = () => {
     setShowNavbar(!showNavbar)
+  }
+  const handleChangeLanguage = (e) => {
+    i18n.changeLanguage(e.target.value)
   }
 
   const location = useLocation()
@@ -22,20 +27,20 @@ const Navbar = () => {
           <div className={`nav-items ${showNavbar ? "active" : ""}`}>
             <FaTimes className="close" onClick={handleClickNav} />
             <Link to="/" onClick={handleClickNav} className={`nav-item ${location.pathname==="/" ? "active" : ""}`}>
-              Home
+              {t("nav-item1")}
             </Link>
             <Link to="/shop" onClick={handleClickNav} className={`nav-item ${location.pathname==="/shop" ? "active" : ""}`}>
-              Collection
+              {t("nav-item2")}
             </Link>
             <Link to="/about-us" onClick={handleClickNav} className={`nav-item ${location.pathname==="/about-us" ? "active" : ""}`}>
-              About Us
+              {t("nav-item3")}
             </Link>
             <Link to="/contact-us" onClick={handleClickNav} className={`nav-item ${location.pathname==="/contact-us" ? "active" : ""}`}>
-              Contacts
+              {t("nav-item4")}
             </Link>
           </div>
         </div>
-          <select className="languages" name="language" id="">
+          <select className="languages" onChange={handleChangeLanguage} name="language" id="">
             <option value="en">English</option>
             <option value="ru">Russian</option>
             <option value="uz">O'zbek</option>

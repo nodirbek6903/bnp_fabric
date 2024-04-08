@@ -3,11 +3,13 @@ import "./Contact.css";
 import { MdOutlineMail } from "react-icons/md";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
+  const {t} = useTranslation()
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -24,17 +26,17 @@ const Contact = () => {
       <div className="container">
         <div className="contact-form">
           <form action="" className="form-items">
-            <h1 className="form-title">Contact</h1>
+            <h1 className="form-title">{t("contact-title")}</h1>
             <input
               type="email"
-              placeholder="Your Email"
+              placeholder={t("contact-input1-placeholder")}
               value={email}
               onChange={handleEmail}
               className="form-input"
             />
             <input
               type="text"
-              placeholder="Phone Number"
+              placeholder={t("contact-input2-placeholder")}
               value={phoneNumber}
               onChange={handlePhoneNumber}
               className="form-input"
@@ -47,10 +49,10 @@ const Contact = () => {
               onChange={handleMessage}
               rows="10"
               className="form-textarea"
-              placeholder="Your Message Here"
+              placeholder={t("contact-area-placeholder")}
             ></textarea>
             <div className="sub-btns">
-              <button className="sub-btn">Submit</button>
+              <button className="sub-btn">{t("contact-button")}</button>
             </div>
           </form>
           <div className="iframe-container">
@@ -66,14 +68,14 @@ const Contact = () => {
           <div className="contact-card">
             <MdOutlineMail className="contact-icon" />
             <span className="contact-text">
-              <b>Email:</b> info@bnpfabric.uz
+              <b>{t("Contact-card-text1")}:</b> info@bnpfabric.uz
             </span>
           </div>
           <div className="contact-card">
             <MdOutlinePhoneInTalk className="contact-icon" />
             <div className="contact-texts">
               <span className="contact-text">
-                <b>Tel:</b>+998903646903
+                <b>{t("Contact-card-text2")}:</b>+998903646903
               </span>
               <span className="contact-text">+998903646903</span>
             </div>
@@ -81,7 +83,7 @@ const Contact = () => {
           <div className="contact-card">
             <CiLocationOn className="contact-icon" />
             <span className="contact-text">
-              <b>Address:</b>Buxhara,st. Alpomysh 80
+              <b>{t("Contact-card-text3")}:</b>Buxhara,st. Alpomysh 80
             </span>
           </div>
         </div>

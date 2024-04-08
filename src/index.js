@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
+import "./i18next/i18next"
 // import { Provider } from 'react-redux';
 // import store from './redux/store';
 
