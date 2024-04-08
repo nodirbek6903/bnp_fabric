@@ -35,15 +35,19 @@ const Collection = () => {
 
   const handleItem1 = () => {
     navigate(`/product-category/${t("main-collectionName2")}`)
+    window.scrollTo({top:0})
   }
   const handleItem2 = () => {
     navigate(`/product-category/${t("main-collectionName4")}`)
+    window.scrollTo({top:0})
   }
   const handleItem3 = () => {
     navigate(`/product-category/${t("main-collectionName1")}`)
+    window.scrollTo({top:0})
   }
   const handleItem4 = () => {
     navigate(`/product-category/${t("main-collectionName3")}`)
+    window.scrollTo({top:0})
   }
 
   if (selectedCollection) {

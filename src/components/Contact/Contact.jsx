@@ -4,6 +4,7 @@ import { MdOutlineMail } from "react-icons/md";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
 import { useTranslation } from "react-i18next";
+import {toast} from "react-toastify"
 
 const Contact = () => {
   const [email, setEmail] = useState("");
@@ -21,11 +22,41 @@ const Contact = () => {
     setMessage(e.target.value);
   };
 
+  const sendTelegramBot = () => {
+    const tg_bot_id = "6419502770:AAFqnnlYZUoPB_uzBfy8rk4-MjUqMgU5dQQ";
+    const chat_id = 571614059;
+    const messageBot = `Email: ${email} \n Phone number: ${phoneNumber} \n Message: ${message}`;
+
+    fetch(`https://api.telegram.org/bot${tg_bot_id}/sendMessage`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "cache-control": "no-cache",
+      },
+      body: JSON.stringify({
+        chat_id: chat_id,
+        text: messageBot,
+      }),
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    sendTelegramBot()
+    setEmail("");
+    setPhoneNumber("");
+    setMessage("");
+    toast.success(t("toast-success"),{
+      position:"top-right",
+      autoClose:1500
+    })
+  }
+
   return (
     <div className="contact-container">
       <div className="container">
         <div className="contact-form">
-          <form action="" className="form-items">
+          <form action="" onSubmit={handleSubmit} className="form-items">
             <h1 className="form-title">{t("contact-title")}</h1>
             <input
               type="email"

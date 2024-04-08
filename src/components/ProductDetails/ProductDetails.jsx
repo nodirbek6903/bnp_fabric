@@ -1,12 +1,12 @@
 import React from "react";
-import { useParams,useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./ProductDetails.css";
 import { useTranslation } from "react-i18next";
 
 const ProductDetails = ({ data }) => {
   const { name } = useParams();
   const { t } = useTranslation();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const selectedCollection = data.find(
     (collection) => t(collection.name) === name
   );
@@ -17,8 +17,9 @@ const ProductDetails = ({ data }) => {
   const { img, productDetails, collectionName } = selectedCollection;
 
   const handleClickItem = () => {
-    navigate(`/product-category/${t(collectionName)}`)
-  }
+    navigate(`/product-category/${t(collectionName)}`);
+    window.scrollTo({ top: 0 });
+  };
 
   return (
     <div className="selected-container">
@@ -62,9 +63,7 @@ const ProductDetails = ({ data }) => {
             </table>
             <span className="category-name">
               {t("Category")}:{" "}
-              <a onClick={handleClickItem}>
-                {t(collectionName)}
-              </a>
+              <a onClick={handleClickItem}>{t(collectionName)}</a>
             </span>
           </div>
         </div>
