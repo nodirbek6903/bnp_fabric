@@ -1,0 +1,125 @@
+[33mcommit 1eaa8ca2964890457cfa4c04ee46270ee4bae12e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mNodirbek[m[33m)[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Mon Apr 8 15:34:42 2024 +0500
+
+    Language errors
+
+[33mcommit 3bb7cb660e3832ef3c9bbb925e96645550f6ff69[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Mon Apr 8 09:43:08 2024 +0500
+
+    language 50% added
+
+[33mcommit ef5fae0874a0f828404600f9733f0592c80a09f9[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Sun Apr 7 21:57:55 2024 +0500
+
+    title icon add
+
+[33mcommit d9bbd181cf311f29a60c4e944cd81ef69e366d43[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Sun Apr 7 19:46:03 2024 +0500
+
+    responsive end
+
+[33mcommit 27ddd6dc83b7e4914266926e031080d6e7ba7eb7[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Sun Apr 7 15:26:56 2024 +0500
+
+    product details responsive add
+
+[33mcommit 4d3fe7b89916c7079113b2c85464fa6fb123e282[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Sun Apr 7 14:18:03 2024 +0500
+
+    responsive 50% end
+
+[33mcommit 12e7ce8ee58f647b6668b0345b1b52a8f07015cb[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Fri Apr 5 20:55:46 2024 +0500
+
+    select edit contact button
+
+[33mcommit 83e0cb3c2fc95221916fc6d20216bd11cd077639[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Fri Apr 5 20:47:43 2024 +0500
+
+    search input add
+
+[33mcommit 24ddfcce0306ed785b7d03fe8aa2232f70fb46b8[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Fri Apr 5 18:34:58 2024 +0500
+
+    img edit
+
+[33mcommit 5d5fad5f9c15dfe53454b5af639935cd5a21878f[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Thu Apr 4 11:35:06 2024 +0500
+
+    search component added
+
+[33mcommit 8b67d9111d6ee871374b1d784355d1bc6c461063[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Thu Apr 4 09:37:06 2024 +0500
+
+    container add.
+
+[33mcommit 9335ed30fbd8c98ac059aafefdc829e328600cc8[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Thu Apr 4 09:27:09 2024 +0500
+
+    Product category edit
+
+[33mcommit e6d0749cb26dd57f27c96986899af3c579096b19[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Wed Apr 3 18:52:23 2024 +0500
+
+    ProductCategory added
+
+[33mcommit d0ed23b079e15598ae0780b642e0a5b4cf9038d5[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Wed Apr 3 16:10:25 2024 +0500
+
+    category section add
+
+[33mcommit 30b057afa22c5779b9ba8173966e696a86044814[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Wed Apr 3 14:32:08 2024 +0500
+
+    ProductDetails style added
+
+[33mcommit a6b0f79a2ba5b654c98313707376a9287ff36744[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Wed Apr 3 12:05:21 2024 +0500
+
+    error not
+
+[33mcommit a4d0344b3916543435d23d425ecc03d9d1e4b7b4[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Wed Apr 3 11:29:14 2024 +0500
+
+    Errors add3
+
+[33mcommit fdf4122aa7d2b5756649435fefb9d8e1b04c18cb[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Tue Apr 2 22:41:47 2024 +0500
+
+    error add
+
+[33mcommit b0d078ee4914f3883476ad6b89925232791e3f2c[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Tue Apr 2 22:17:42 2024 +0500
+
+    Props error
+
+[33mcommit be9ff64f0544a81fbd5ae3dd580097b86e440046[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Tue Apr 2 02:43:07 2024 +0500
+
+    commit one
+
+[33mcommit 2fd05d20fa281cee907fcbe2f7c69cddbdbea66a[m
+Author: nodirchik6903 <nu2913634@gmail.com>
+Date:   Tue Apr 2 00:36:14 2024 +0500
+
+    Initialize project using Create React App

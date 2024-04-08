@@ -32,7 +32,7 @@ const CollectionData = [
   {
     "en": {
       id: 1,
-      collectionName: "Winter Collection",
+      collectionName: "main-collectionName1",
       name: "Squares",
       img: WinterCollection1,
       productDetails: {
@@ -46,7 +46,7 @@ const CollectionData = [
     },
     "ru": {
       id: 1,
-      collectionName: "Зимняя коллекция",
+      collectionName: "main-collectionName1",
       name: "Квадраты",
       img: WinterCollection1,
       productDetails: {
@@ -60,7 +60,7 @@ const CollectionData = [
     },
     "uz": {
       id: 1,
-      collectionName: "Qish kolleksiyasi",
+      collectionName: "main-collectionName1",
       name: "To'rtburchaklar",
       img: WinterCollection1,
       productDetails: {

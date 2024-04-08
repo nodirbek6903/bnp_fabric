@@ -3,14 +3,21 @@ import "./ProductCategory.css";
 import { FaChevronRight, FaSearch, FaChevronDown } from "react-icons/fa";
 import { MdArrowRightAlt } from "react-icons/md";
 import { useNavigate, useParams } from "react-router-dom";
+<<<<<<< HEAD
 // import ProductDetails from "../ProductDetails/ProductDetails";
 import { useTranslation } from "react-i18next";
 import CollectionData from "../../Data/ProductData";
+=======
+import ProductDetails from "../ProductDetails/ProductDetails";
+>>>>>>> parent of 3bb7cb6 (language 50% added)
 
 const ProductCategory = ({ data, language }) => {
   const [showCategory, setShowCategory] = useState(false);
   const { collectionName } = useParams();
+<<<<<<< HEAD
   const { t } = useTranslation();
+=======
+>>>>>>> parent of 3bb7cb6 (language 50% added)
   const selectedCategory = data.filter(
     (category) => category[language].collectionName === collectionName
   );
@@ -76,7 +83,7 @@ const ProductCategory = ({ data, language }) => {
         <div className="search-input-container">
           <input
             type="text"
-            placeholder={t("collection-search-placeholder")}
+            placeholder="Search here"
             value={searchCollection}
             onChange={handleSearchChange}
             className="search-input"
@@ -88,7 +95,7 @@ const ProductCategory = ({ data, language }) => {
         </div>
         <div className="category-dropdown">
           <div className="category-title" onClick={handlShowCategory}>
-            <span className="title-collection">{t("nav-item2")}</span>
+            <span className="title-collection">Collection</span>
             {showCategory ? (
               <FaChevronDown className="icon-collection" />
             ) : (
@@ -100,25 +107,25 @@ const ProductCategory = ({ data, language }) => {
               href={`/product-category/${t("main-collectionName2")}`}
               className="category-link"
             >
-              <span className="category-item">{t("main-collectionName2")}</span>
+              <span className="category-item">Autumn Collection</span>
             </a>
             <a
               href={`/product-category/${t("main-collectionName4")}`}
               className="category-link"
             >
-              <span className="category-item">{t("main-collectionName4")}</span>
+              <span className="category-item">Spring Collection</span>
             </a>
             <a
               href={`/product-category/${t("main-collectionName1")}`}
               className="category-link"
             >
-              <span className="category-item">{t("main-collectionName1")}</span>
+              <span className="category-item">Winter Collection</span>
             </a>
             <a
               href={`/product-category/${t("main-collectionName3")}`}
               className="category-link"
             >
-              <span className="category-item">{t("main-collectionName3")}</span>
+              <span className="category-item">Summer Collection</span>
             </a>
           </div>
         </div>
@@ -126,15 +133,26 @@ const ProductCategory = ({ data, language }) => {
       <div className="category-right">
         <div className="right-title">
           <div className="collection-length">
+<<<<<<< HEAD
             <span className="uzunlik">{t("nav-item2")}</span>
             {/* <span className="uzunlik">
+=======
+            <span className="uzunlik">Collection</span>
+            <span className="uzunlik">
+>>>>>>> parent of 3bb7cb6 (language 50% added)
               Showing {startIndex}-{endIndex} of {selectedCategory.length}
             </span> */}
           </div>
           <a href="/contact-us">
+<<<<<<< HEAD
             <button className="right-buttons-contact">
               {t("contact-title")}
             </button>
+=======
+          <button className="right-buttons-contact">
+            Contact
+          </button>
+>>>>>>> parent of 3bb7cb6 (language 50% added)
           </a>
         </div>
         <div className="right-cards">

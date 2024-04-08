@@ -5,7 +5,6 @@ import CollectionData from "../../Data/ProductData";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import ProductDetails from "../ProductDetails/ProductDetails";
-import { useTranslation } from "react-i18next";
 
 const Collection = ({ language }) => {
   const [showCategory, setShowCategory] = useState(false);
@@ -18,7 +17,7 @@ const Collection = ({ language }) => {
     CollectionData.filter((item) => item[language])
   );
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const {t} = useTranslation()
 
   const handleNextPage = () => {
     if (endIndex + 16 <= CollectionData.length) {
@@ -78,7 +77,7 @@ const Collection = ({ language }) => {
         <div className="search-container">
           <input
             type="text"
-            placeholder={t("collection-search-placeholder")}
+            placeholder="Search here"
             className="search-input"
             value={searchCollection}
             onChange={handleSearchChange}
@@ -90,7 +89,7 @@ const Collection = ({ language }) => {
         </div>
         <div className="shop-left-dropdown">
           <div className="shop-left-title" onClick={handleShowCategoryClick}>
-            <span className="title-collection">{t("nav-item2")}</span>
+            <span className="title-collection">Collection</span>
             {showCategory ? (
               <FaChevronDown className="icon-collection" />
             ) : (
@@ -98,30 +97,64 @@ const Collection = ({ language }) => {
             )}
           </div>
           <div className={`shop-left-items ${showCategory ? "active" : ""}`}>
-            {CollectionData.slice(0, 1).map((item, index) => (
+            {
+            CollectionData.slice(0, 1).map((item, index) => (
               <a
                 key={index}
                 href={`/product-category/${item[language].collectionName}`}
                 className="shop-left-link"
               >
-                {t(item[language].collectionName)}
+                {t("main-collectionName2")}
               </a>
-            ))}
+            )
+          }
+
+            {CollectionData.find(
+              (item) => item.collectionName === "Spring Collection"
+            ) && (
+              <a
+                href={`/product-category/Spring Collection`}
+                className="shop-left-link"
+              >
+                {t("main-collectionName4")}
+              </a>
+            )}
+
+            {CollectionData.find(
+              (item) => item.collectionName === "Winter Collection"
+            ) && (
+              <a
+                href={`/product-category/Winter Collection`}
+                className="shop-left-link"
+              >
+                {t("main-collectionName1")}
+              </a>
+            )}
+
+            {CollectionData.find(
+              (item) => item.collectionName === "Summer Collection"
+            ) && (
+              <a
+                href={`/product-category/Summer Collection`}
+                className="shop-left-link"
+              >
+                {t("main-collectionName3")}
+              </a>
+            )}
           </div>
         </div>
       </div>
       <div className="shop-right">
         <div className="shop-right-title">
           <div className="collection-length">
-            <span className="uzunlik">{t("nav-item2")}</span>
+            <span className="uzunlik">Collection</span>
             <span className="uzunlik">
               {/* Showing {startIndex}-{endIndex} of {CollectionData.length} */}
+
             </span>
           </div>
           <a href="/contact-us">
-            <button className="right-buttons-contact">
-              {t("contact-title")}
-            </button>
+            <button className="right-buttons-contact">{t("contact-title")}</button>
           </a>
         </div>
         <div className="shop-right-cards">
