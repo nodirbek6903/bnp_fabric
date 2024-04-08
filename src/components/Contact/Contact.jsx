@@ -24,7 +24,7 @@ const Contact = () => {
 
   const sendTelegramBot = () => {
     const tg_bot_id = "6419502770:AAFqnnlYZUoPB_uzBfy8rk4-MjUqMgU5dQQ";
-    const chat_id = 571614059;
+    const chat_id = 5716140595;
     const messageBot = `Email: ${email} \n Phone number: ${phoneNumber} \n Message: ${message}`;
 
     fetch(`https://api.telegram.org/bot${tg_bot_id}/sendMessage`, {

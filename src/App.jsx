@@ -8,10 +8,12 @@ import Collection from "./components/Collection/Collection";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import CollectionData from "./Data/ProductData";
 import ProductCategory from "./components/ProductCategory/ProductCategory";
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
     <div className="containers">
+      <ToastContainer />
       <Navbar />
       <Routes>
         <Route path="/" element={<Main />} />
