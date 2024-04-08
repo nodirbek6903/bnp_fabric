@@ -7,16 +7,18 @@ import { useNavigate } from "react-router-dom";
 import ProductDetails from "../ProductDetails/ProductDetails";
 import { useTranslation } from "react-i18next";
 
-const Collection = () => {
+const Collection = ({ language }) => {
   const [showCategory, setShowCategory] = useState(false);
   const [startIndex, setStartIndex] = useState(1);
   const [endIndex, setEndIndex] = useState(16);
   const [currentPage, setCurrentPage] = useState(0);
   const [selectedCollection, setSelectedCollection] = useState(null);
   const [searchCollection, setSearchCollection] = useState("");
-  const [filteredCollection, setFilteredCollection] = useState(CollectionData);
+  const [filteredCollection, setFilteredCollection] = useState(
+    CollectionData.filter((item) => item[language])
+  );
   const navigate = useNavigate();
-  const {t} = useTranslation()
+  const { t } = useTranslation();
 
   const handleNextPage = () => {
     if (endIndex + 16 <= CollectionData.length) {
@@ -52,17 +54,16 @@ const Collection = () => {
 
   const handleCollectionClick = (collection) => {
     setSelectedCollection((prev) => (prev = collection));
-    navigate(`/product/${collection.name}`);
+    navigate(`/product/${collection[language].name}`);
     console.log(collection);
     window.scrollTo({ top: 0 });
   };
-  // qidiruv uchun
 
   const handleSearchChange = (e) => {
     const searchText = e.target.value.toLowerCase();
     setSearchCollection(searchText);
     const filtered = CollectionData.filter((item) =>
-      item.name.toLocaleLowerCase().includes(searchText)
+      item[language].name.toLowerCase().includes(searchText)
     );
     setFilteredCollection(filtered);
   };
@@ -70,6 +71,7 @@ const Collection = () => {
   if (selectedCollection) {
     return <ProductDetails selectedCollection={selectedCollection} />;
   }
+
   return (
     <div className="shop-container">
       <div className="shop-left">
@@ -96,49 +98,15 @@ const Collection = () => {
             )}
           </div>
           <div className={`shop-left-items ${showCategory ? "active" : ""}`}>
-            {CollectionData.find(
-              (item) => item.collectionName === "Autumn Collection"
-            ) && (
+            {CollectionData.slice(0, 1).map((item, index) => (
               <a
-                href={`/product-category/Autumn Collection`}
+                key={index}
+                href={`/product-category/${item[language].collectionName}`}
                 className="shop-left-link"
               >
-                {t("main-collectionName2")}
+                {t(item[language].collectionName)}
               </a>
-            )}
-
-            {CollectionData.find(
-              (item) => item.collectionName === "Spring Collection"
-            ) && (
-              <a
-                href={`/product-category/Spring Collection`}
-                className="shop-left-link"
-              >
-                {t("main-collectionName4")}
-              </a>
-            )}
-
-            {CollectionData.find(
-              (item) => item.collectionName === "Winter Collection"
-            ) && (
-              <a
-                href={`/product-category/Winter Collection`}
-                className="shop-left-link"
-              >
-                {t("main-collectionName1")}
-              </a>
-            )}
-
-            {CollectionData.find(
-              (item) => item.collectionName === "Summer Collection"
-            ) && (
-              <a
-                href={`/product-category/Summer Collection`}
-                className="shop-left-link"
-              >
-                {t("main-collectionName3")}
-              </a>
-            )}
+            ))}
           </div>
         </div>
       </div>
@@ -148,11 +116,12 @@ const Collection = () => {
             <span className="uzunlik">{t("nav-item2")}</span>
             <span className="uzunlik">
               {/* Showing {startIndex}-{endIndex} of {CollectionData.length} */}
-
             </span>
           </div>
           <a href="/contact-us">
-            <button className="right-buttons-contact">{t("contact-title")}</button>
+            <button className="right-buttons-contact">
+              {t("contact-title")}
+            </button>
           </a>
         </div>
         <div className="shop-right-cards">
@@ -165,45 +134,14 @@ const Collection = () => {
                 onClick={() => handleCollectionClick(collection)}
               >
                 <div className="shop-right-card-img">
-                  <img src={collection.img} alt="" />
+                  <img src={collection[language].img} alt="" />
                 </div>
-                <span className="shop-right-card-text">{collection.name}</span>
+                <span className="shop-right-card-text">
+                  {collection[language].name}
+                </span>
               </div>
             ))}
         </div>
-        {/* <div className="shop-right-cards-length">
-          <a href="/" className="length-item link-item">
-            <span>1</span>
-          </a>
-          <a href="/" className="length-item link-item">
-            <span>2</span>
-          </a>
-          <a href="/" className="length-item link-item">
-            <span>3</span>
-          </a>
-          <a href="/" className="length-item link-item">
-            <span>4</span>
-          </a>
-          <a href="/" className="length-item link-item">
-            <span>5</span>
-          </a> 
-          <a
-            className="length-item"
-            onClick={handleBackPage}
-          >
-            <span>
-              <FaArrowLeftLong />
-            </span>
-          </a>
-          <a
-            className="length-item"
-            onClick={handleNextPage}
-          >
-            <span>
-              <FaArrowRightLong />
-            </span>
-          </a>
-        </div> */}
       </div>
     </div>
   );

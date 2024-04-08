@@ -3,21 +3,21 @@ import "./ProductCategory.css";
 import { FaChevronRight, FaSearch, FaChevronDown } from "react-icons/fa";
 import { MdArrowRightAlt } from "react-icons/md";
 import { useNavigate, useParams } from "react-router-dom";
-import ProductDetails from "../ProductDetails/ProductDetails";
+// import ProductDetails from "../ProductDetails/ProductDetails";
 import { useTranslation } from "react-i18next";
+import CollectionData from "../../Data/ProductData";
 
-const ProductCategory = ({ data }) => {
+const ProductCategory = ({ data, language }) => {
   const [showCategory, setShowCategory] = useState(false);
   const { collectionName } = useParams();
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   const selectedCategory = data.filter(
-    (category) => category.collectionName === collectionName
+    (category) => category[language].collectionName === collectionName
   );
-  const [startIndex, setStartIndex] = useState(1);
+  // const [startIndex, setStartIndex] = useState(1);
   const [endIndex, setEndIndex] = useState(16);
-  const [currentPage, setCurrentPage] = useState(0);
-  const [filteredCollection, setFilteredCollection] =
-    useState(selectedCategory);
+  // const [currentPage, setCurrentPage] = useState(0);
+  const [filteredCollection, setFilteredCollection] = useState(selectedCategory);
   const [searchCollection, setSearchCollection] = useState("");
   const navigate = useNavigate();
 
@@ -25,28 +25,31 @@ const ProductCategory = ({ data }) => {
     setEndIndex(selectedCategory.length);
   }
 
-  const handleNextPage = () => {
-    if (endIndex + 16 <= selectedCategory.length) {
-      setStartIndex((prev) => prev + 16);
-      setEndIndex((prev) => prev + 16);
-      setCurrentPage((prev) => prev + 1);
-    } else {
-      setStartIndex(selectedCategory.length - 16);
-      setEndIndex(selectedCategory.length);
-    }
-  };
-  const handleBackPage = () => {
-    if (startIndex - 16 >= 1) {
-      setStartIndex((prev) => prev - 16);
-      setEndIndex((prev) => prev - 16);
-      setCurrentPage((prev) => prev - 1);
-    } else {
-      setStartIndex(1);
-      setEndIndex(16);
-    }
-  };
+  // const handleNextPage = () => {
+  //   if (endIndex + 16 <= selectedCategory.length) {
+  //     setStartIndex((prev) => prev + 16);
+  //     setEndIndex((prev) => prev + 16);
+  //     setCurrentPage((prev) => prev + 1);
+  //   } else {
+  //     setStartIndex(selectedCategory.length - 16);
+  //     setEndIndex(selectedCategory.length);
+  //   }
+  // };
+  // const handleBackPage = () => {
+  //   if (startIndex - 16 >= 1) {
+  //     setStartIndex((prev) => prev - 16);
+  //     setEndIndex((prev) => prev - 16);
+  //     setCurrentPage((prev) => prev - 1);
+  //   } else {
+  //     setStartIndex(1);
+  //     setEndIndex(16);
+  //   }
+  // };
+
+  console.log(selectedCategory);
+
   const handleClickProduct = (category) => {
-    navigate(`/product/${category.name}`);
+    navigate(`/product/${category[language].name}`);
     window.scrollTo({ top: 0 });
     console.log(category);
   };
@@ -54,8 +57,8 @@ const ProductCategory = ({ data }) => {
   const handleSearchChange = (e) => {
     const searchText = e.target.value.toLowerCase();
     setSearchCollection(searchText);
-    const filtered = selectedCategory.filter((item) =>
-      item.name.toLocaleLowerCase().includes(searchText)
+    const filtered = CollectionData.filter((item) =>
+      item[language].name.toLowerCase().includes(searchText)
     );
     setFilteredCollection(filtered);
   };
@@ -94,25 +97,25 @@ const ProductCategory = ({ data }) => {
           </div>
           <div className={`category-items ${showCategory ? "active" : null}`}>
             <a
-              href={`/product-category/Autumn Collection`}
+              href={`/product-category/${t("main-collectionName2")}`}
               className="category-link"
             >
               <span className="category-item">{t("main-collectionName2")}</span>
             </a>
             <a
-              href={`/product-category/Spring Collection`}
+              href={`/product-category/${t("main-collectionName4")}`}
               className="category-link"
             >
               <span className="category-item">{t("main-collectionName4")}</span>
             </a>
             <a
-              href={`/product-category/Winter Collection`}
+              href={`/product-category/${t("main-collectionName1")}`}
               className="category-link"
             >
               <span className="category-item">{t("main-collectionName1")}</span>
             </a>
             <a
-              href={`/product-category/Summer Collection`}
+              href={`/product-category/${t("main-collectionName3")}`}
               className="category-link"
             >
               <span className="category-item">{t("main-collectionName3")}</span>
@@ -124,14 +127,14 @@ const ProductCategory = ({ data }) => {
         <div className="right-title">
           <div className="collection-length">
             <span className="uzunlik">{t("nav-item2")}</span>
-            <span className="uzunlik">
+            {/* <span className="uzunlik">
               Showing {startIndex}-{endIndex} of {selectedCategory.length}
-            </span>
+            </span> */}
           </div>
           <a href="/contact-us">
-          <button className="right-buttons-contact">
-          {t("contact-title")}
-          </button>
+            <button className="right-buttons-contact">
+              {t("contact-title")}
+            </button>
           </a>
         </div>
         <div className="right-cards">
@@ -142,9 +145,9 @@ const ProductCategory = ({ data }) => {
               onClick={() => handleClickProduct(category)}
             >
               <div className="right-card-img">
-                <img src={category.img} alt="" />
+                <img src={category[language].img} alt="" />
               </div>
-              <span className="right-card-text">{category.name}</span>
+              <span className="right-card-text">{category[language].name}</span>
             </div>
           ))}
         </div>
