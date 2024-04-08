@@ -47,10 +47,6 @@ const Main = () => {
           <div className="about-card">
             <img src={AboutIcon1} className="about-img" alt="" />
             <div className="about-texts">
-              <span className="about-title">
-                {t("main-section2-card-title1")}
-              </span>
-              <p className="about-descr">{t("main-section2-card-text1")}</p>
               <span className="about-title">{t("main-section2-card-title1")}</span>
               <p className="about-descr">{t("main-section2-card-text1")}</p>
             </div>
@@ -58,10 +54,6 @@ const Main = () => {
           <div className="about-card">
             <img src={AboutIcon2} className="about-img" alt="" />
             <div className="about-texts">
-              <span className="about-title">
-                {t("main-section2-card-title2")}
-              </span>
-              <p className="about-descr">{t("main-section2-card-text2")}</p>
               <span className="about-title">{t("main-section2-card-title2")}</span>
               <p className="about-descr">{t("main-section2-card-text2")}</p>
             </div>
@@ -69,10 +61,6 @@ const Main = () => {
           <div className="about-card">
             <img src={AboutIcon3} className="about-img" alt="" />
             <div className="about-texts">
-              <span className="about-title">
-                {t("main-section2-card-title3")}
-              </span>
-              <p className="about-descr">{t("main-section2-card-text3")}</p>
               <span className="about-title">{t("main-section2-card-title3")}</span>
               <p className="about-descr">{t("main-section2-card-text3")}</p>
             </div>
