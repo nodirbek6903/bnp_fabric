@@ -63,7 +63,7 @@ const ProductCategory = ({ data }) => {
         <div className="search-input-container">
           <input
             type="text"
-            placeholder="Search here"
+            placeholder={t("collection-search-placeholder")}
             value={searchCollection}
             onChange={handleSearchChange}
             className="search-input"

@@ -34,7 +34,7 @@ const Main = () => {
   return (
     <div className="main-container">
       <div className="fixed-telegram">
-        <div className="tg-text">Contact Us</div>
+        <div className="tg-text">{t("nav-item4")}</div>
         <a href="https://t.me/Nodirbek_6903" className="tg-link">
         <FaTelegram className="telegram" />
         </a>

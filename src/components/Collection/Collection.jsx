@@ -60,7 +60,7 @@ const Collection = () => {
         <div className="search-container">
           <input
             type="text"
-            placeholder="Bu yerda qidirish"
+            placeholder={t("collection-search-placeholder")}
             className="search-input"
             value={searchCollection}
             onChange={handleSearchChange}
