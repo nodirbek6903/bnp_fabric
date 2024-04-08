@@ -12,6 +12,7 @@ import CollectionData from "./../../Data/ProductData";
 import { useNavigate } from "react-router-dom";
 import ProductDetails from "../ProductDetails/ProductDetails";
 import { useTranslation } from 'react-i18next';
+import { FaTelegram } from "react-icons/fa";
 
 const Main = () => {
   const [selectedCollection, setSelectedCollection] = useState(null);
@@ -32,6 +33,12 @@ const Main = () => {
 
   return (
     <div className="main-container">
+      <div className="fixed-telegram">
+        <div className="tg-text">Contact Us</div>
+        <a href="https://t.me/Nodirbek_6903" className="tg-link">
+        <FaTelegram className="telegram" />
+        </a>
+      </div>
       <div className="main">
         <div className="main-img">
           <img src={MainImg} alt="" />
