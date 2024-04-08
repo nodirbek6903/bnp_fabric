@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import NavLogo from "../../images/nav-logo.png";
 import { Link, useLocation } from "react-router-dom";
@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 const Navbar = () => { 
   const [showNavbar, setShowNavbar] = useState(false);
+  const [addShadow,setAddShadow] = useState(false)
   const { t, i18n } = useTranslation();
 
   const handleClickNav = () => {
@@ -20,9 +21,23 @@ const Navbar = () => {
 
   const location = useLocation();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if(window.scrollY > 0){
+        setAddShadow(true)
+      }else{
+        setAddShadow(false)
+      }
+    }
+    window.addEventListener("scroll",handleScroll)
+    return () => {
+      window.removeEventListener("scroll",handleScroll)
+    }
+  })
+
   return (
     <div className="nav-container">
-      <div className="container">
+      <div className={`container ${addShadow ? "activeNav": ""}`}>
         <div className="nav-logo-items">
           <div className="nav-logo">
             <a href="/">

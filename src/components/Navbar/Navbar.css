@@ -2,17 +2,22 @@
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
+    margin-bottom: 80px;
 }
 .nav-container .container{
+    width: 100%;
+    position: fixed;
     max-width: 1560px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 100px;
+    margin: 0 auto;
+    z-index: 999999;
+}
+.nav-container .container.activeNav{
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    /* padding: 0 30px; */
-    margin: 0 auto;
 }
 .container .nav-logo-items{
     width: 40%;

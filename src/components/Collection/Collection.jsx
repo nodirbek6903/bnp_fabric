@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Collection.css";
 import { FaChevronDown, FaChevronRight, FaSearch } from "react-icons/fa";
 import CollectionData from "../../Data/ProductData";
