@@ -8,7 +8,7 @@ const ProductDetails = ({ data }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const selectedCollection = data.find(
-    (collection) => t(collection.name) === name
+    (collection) => typeof(t(collection.name)) === typeof(name)
   );
 
   if (!selectedCollection) {
