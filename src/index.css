@@ -46,3 +46,21 @@
 .telegram {
   font-size: 24px;
 }
+
+@media screen and (max-width:700px) {
+  .fixed-telegram{
+    padding: 7px;
+    bottom: 10px;
+  }
+  .telegram{
+    font-size: 20px;
+  }
+  .tg-text{
+    font-size: 13px;
+  }
+}
+@media screen and (max-width:500px) {
+  .fixed-telegram{
+    display: none;
+  }
+}

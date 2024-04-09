@@ -97,13 +97,14 @@
         right: 0;
         display: none;
         height: 100vh;
-        width: 30%;
+        width: 40%;
         background: #fff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         z-index: 2;
         justify-content: center;
-        align-content: space-evenly;
+        align-content: center;
         text-align: center;
+        gap: 3rem;
     }
     .nav-logo-items .nav-items.active{
         display: grid;
@@ -139,7 +140,7 @@
         width: 130px;
     }
     .nav-logo-items .nav-items{
-        width: 40%;
+        width: 50%;
     }
 }
 @media screen and (max-width:400px) {
@@ -155,9 +156,6 @@
     }
     .bars,.close{
         font-size: 20px;
-    }
-    .nav-logo-items .nav-items{
-        width: 50%;
     }
 }
 @media screen and (max-width:320px) {

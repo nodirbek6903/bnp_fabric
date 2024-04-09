@@ -19,7 +19,7 @@ function App() {
       <ToastContainer />
       <div className="fixed-telegram">
         <div className="tg-text">{t("nav-item4")}</div>
-        <a href="https://t.me/Nodirbek_6903" className="tg-link">
+        <a href="https://t.me/Nodirbek_6903" target="_blank" className="tg-link">
         <FaTelegram className="telegram" />
         </a>
       </div>
