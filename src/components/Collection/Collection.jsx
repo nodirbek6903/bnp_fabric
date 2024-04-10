@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Collection.css";
 import { FaChevronDown, FaChevronRight, FaSearch } from "react-icons/fa";
 import CollectionData from "../../Data/ProductData";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ProductDetails from "../ProductDetails/ProductDetails";
 import { useTranslation } from "react-i18next";
 
@@ -112,11 +112,11 @@ const Collection = () => {
           <div className="collection-length">
             <span className="uzunlik">{t("nav-item2")}</span>
           </div>
-          <a href="/contact-us">
+          <Link to="/contact-us">
             <button className="right-buttons-contact">
               {t("contact-title")}
             </button>
-          </a>
+          </Link>
         </div>
         <div className="shop-right-cards">
           {filteredCollection.map((collection, index) => (

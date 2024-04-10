@@ -20,6 +20,8 @@
   align-items: center;
   transition: transform 0.3s ease; 
   z-index: 9999;
+  text-decoration: none;
+  color: #000;
 }
 
 .fixed-telegram:hover {
@@ -32,14 +34,14 @@
   font-weight: bold;
 }
 
-.tg-link {
+.tg-icon {
   display: flex;
   align-items: center;
   text-decoration: none;
   color: #0088cc;
 }
 
-.tg-link:hover {
+.tg-icon:hover {
   color: #005580;
 }
 

@@ -8,38 +8,44 @@ import Collection from "./components/Collection/Collection";
 import ProductDetails from "./components/ProductDetails/ProductDetails";
 import CollectionData from "./Data/ProductData";
 import ProductCategory from "./components/ProductCategory/ProductCategory";
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer } from "react-toastify";
 import { FaTelegram } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 function App() {
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   return (
-    <div className="containers">
+    <>
       <ToastContainer />
-      <div className="fixed-telegram">
-        <div className="tg-text">{t("nav-item4")}</div>
-        <a href="https://t.me/Nodirbek_6903" target="_blank" className="tg-link">
-        <FaTelegram className="telegram" />
+      <div className="containers">
+        <a
+          href="https://t.me/Nodirbek_6903"
+          target="_blank"
+          className="fixed-telegram"
+        >
+          <div className="tg-text">{t("nav-item4")}</div>
+          <span className="tg-icon">
+            <FaTelegram className="telegram" />
+          </span>
         </a>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/about-us" element={<About />} />
+          <Route path="/shop" element={<Collection />} />
+          <Route path="/contact-us" element={<Contact />} />
+          <Route
+            path="/product/:name"
+            element={<ProductDetails data={CollectionData} />}
+          />
+          <Route
+            path="/product-category/:collectionName"
+            element={<ProductCategory data={CollectionData} />}
+          />
+        </Routes>
+        <Footer />
       </div>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/about-us" element={<About />} />
-        <Route path="/shop" element={<Collection  />} />
-        <Route path="/contact-us" element={<Contact />} />
-        <Route
-          path="/product/:name"
-          element={<ProductDetails data={CollectionData} />}
-        />
-        <Route
-          path="/product-category/:collectionName"
-          element={<ProductCategory data={CollectionData} />}
-        />
-      </Routes>
-      <Footer />
-    </div>
+    </>
   );
 }
 

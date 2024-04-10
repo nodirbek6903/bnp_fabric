@@ -4,7 +4,7 @@ import { MdOutlineMail } from "react-icons/md";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
 import { useTranslation } from "react-i18next";
-import {toast} from "react-toastify"
+import {ToastContainer, toast} from "react-toastify"
 
 const Contact = () => {
   const [email, setEmail] = useState("");
@@ -48,7 +48,7 @@ const Contact = () => {
     setMessage("");
     toast.success(t("toast-success"),{
       position:"top-right",
-      autoClose:1500
+      autoClose:2000
     })
   }
 

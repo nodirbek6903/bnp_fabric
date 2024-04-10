@@ -12,6 +12,7 @@ const Navbar = () => {
 
   const handleClickNav = () => {
     setShowNavbar(!showNavbar);
+    window.scrollTo({top:0})
   };
 
   const handleChangeLanguage = (e) => {
@@ -90,9 +91,9 @@ const Navbar = () => {
           name="language"
           id=""
         >
-          <option value="en">English</option>
-          <option value="ru">Russian</option>
-          <option value="uz">O'zbek</option>
+          <option className="options" value="en">English</option>
+          <option className="options" value="ru">Russian</option>
+          <option className="options" value="uz">O'zbek</option>
         </select>
         <FaBars className="bars" onClick={handleClickNav} />
       </div>

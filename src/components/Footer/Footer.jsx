@@ -1,10 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css";
 import FooterLogo from "../../images/nav-logo.png";
 import { useTranslation } from "react-i18next";
+import { toast } from 'react-toastify';
 
 const Footer = () => {
   const {t} = useTranslation()
+  const [email,setEmail] = useState("")
+
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value)
+  }
+
+  const sendTelegramBot = () => {
+    const tg_bot_id = "6419502770:AAFqnnlYZUoPB_uzBfy8rk4-MjUqMgU5dQQ";
+    const chat_id = 5716140595;
+    const messageBot = `Email: ${email}`;
+
+    fetch(`https://api.telegram.org/bot${tg_bot_id}/sendMessage`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "cache-control": "no-cache",
+      },
+      body: JSON.stringify({
+        chat_id: chat_id,
+        text: messageBot,
+      }),
+    });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    sendTelegramBot()
+    setEmail("");
+    toast.success(t("toast-success"),{
+      position:"top-right",
+      autoClose:2000
+    })
+  }
+
   return (
     <div className="footer-container">
       <div className="footer-cards">
@@ -45,8 +80,8 @@ const Footer = () => {
         <div className="footer-card footer-contact">
           <span className="card-title">{t("footer-section1-title3")}</span>
           <div className="footer-email-btn">
-            <input type="email" placeholder={t("footer-section-input-placeholder")} />
-            <button className="footer-btn">{t("footer-section-button")}</button>
+            <input type="email" value={email} onChange={handleEmail} placeholder={t("footer-section-input-placeholder")} />
+            <button type="submit" className="footer-btn" onClick={handleSubmit}>{t("footer-section-button")}</button>
           </div>
         </div>
       </div>

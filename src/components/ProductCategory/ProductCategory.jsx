@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./ProductCategory.css";
 import { FaChevronRight, FaSearch, FaChevronDown } from "react-icons/fa";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import CollectionData from "../../Data/ProductData";
 
@@ -103,11 +103,11 @@ const ProductCategory = ({ data }) => {
           <div className="collection-length">
             <span className="uzunlik">{t("nav-item2")}</span>
           </div>
-          <a href="/contact-us">
+          <Link to="/contact-us">
             <button className="right-buttons-contact">
               {t("contact-title")}
             </button>
-          </a>
+          </Link>
         </div>
         <div className="right-cards">
           {filteredCollection.map((category, ind) => (

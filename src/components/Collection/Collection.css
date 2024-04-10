@@ -145,6 +145,9 @@
     height: 100%;
     border-radius: 20px;
 }
+.shop-right-card .shop-right-card-img:hover{
+    scale: 1.05;
+}
 .shop-right-card:hover .shop-right-card-text{
     color: #ff523b;
 }

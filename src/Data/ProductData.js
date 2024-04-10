@@ -452,7 +452,7 @@ const CollectionData = [
     {
         id:31,
         collectionName: "main-collectionName4",
-        name:"product-name30",
+        name:"product-name4",
         img:SummerCollection10,
         productDetails: {
             material:"100% cotton flannel",
@@ -466,8 +466,8 @@ const CollectionData = [
     {
         id:32,
         collectionName: "main-collectionName4",
-        name:"product-name30",
-        img:SummerCollection10,
+        name:"product-name12",
+        img:AutumnCollection1,
         productDetails: {
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
@@ -480,8 +480,8 @@ const CollectionData = [
     {
         id:33,
         collectionName: "main-collectionName4",
-        name:"product-name30",
-        img:SummerCollection10,
+        name:"product-name23",
+        img:SummerCollection7,
         productDetails: {
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
@@ -494,8 +494,8 @@ const CollectionData = [
     {
         id:34,
         collectionName: "main-collectionName4",
-        name:"product-name30",
-        img:SummerCollection10,
+        name:"product-name9",
+        img:AutumnCollection5,
         productDetails: {
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
@@ -509,7 +509,7 @@ const CollectionData = [
         id:35,
         collectionName: "main-collectionName4",
         name:"product-name30",
-        img:SummerCollection10,
+        img:AutumnCollection9,
         productDetails: {
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",

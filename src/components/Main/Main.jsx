@@ -9,7 +9,7 @@ import AboutIcon3 from "../../images/main-icon3.svg";
 import AboutIcon4 from "../../images/main-icon4.svg";
 import Winter from "../../images/main2.png";
 import CollectionData from "./../../Data/ProductData";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ProductDetails from "../ProductDetails/ProductDetails";
 import { useTranslation } from 'react-i18next';
 import { FaTelegram } from "react-icons/fa";
@@ -97,9 +97,9 @@ const Main = () => {
                 {t("main-section-umumiy-card-text2")}
               </span>
               <div className="product-btn">
-                <a href="/shop" className="btn">
+                <Link to="/shop" className="btn">
                   {t("main-section-umumiy-card-button")}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -150,9 +150,9 @@ const Main = () => {
                 {t("main-section-umumiy-card-text2")}
               </span>
               <div className="product-btn">
-                <a href="/shop" className="btn">
+                <Link to="/shop" className="btn">
                   {t("main-section-umumiy-card-button")}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -203,9 +203,9 @@ const Main = () => {
                 {t("main-section-umumiy-card-text2")}
               </span>
               <div className="product-btn">
-                <a href="/shop" className="btn">
+                <Link to="/shop" className="btn">
                   {t("main-section-umumiy-card-button")}
-                </a>
+                </Link>
               </div>
             </div>
           </div>

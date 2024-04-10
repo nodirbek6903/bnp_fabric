@@ -143,6 +143,9 @@
     height: 200px;
     overflow: hidden;
 }
+.right-card .right-card-img:hover{
+    scale: 1.05;
+}
 .right-card .right-card-img img{
     width: 100%;
     height: 100%;
