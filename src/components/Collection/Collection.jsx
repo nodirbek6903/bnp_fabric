@@ -20,7 +20,7 @@ const Collection = () => {
 
   const handleCollectionClick = (collection) => {
     setSelectedCollection(collection);
-    navigate(`/product-category/${t(collection.name)}`);
+    navigate(`/product/${t(collection.name)}`);
     window.scrollTo({ top: 0 });
   };
 
