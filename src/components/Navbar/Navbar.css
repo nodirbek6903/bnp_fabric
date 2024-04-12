@@ -21,9 +21,9 @@
     margin: 0 auto;
     z-index: 9;
     padding: 0 50px;
+    background: #fff;
 }
 .nav-container .container.activeNav{
-    background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .container .nav-logo-items{
