@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./ProductDetails.css";
 import { useTranslation } from "react-i18next";
+import { IoStarSharp } from "react-icons/io5";
+import { toast } from 'react-toastify';
 
 const ProductDetails = ({ data }) => {
   const { name } = useParams();
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const [BeforeContent, setBeforeContent] = useState(false);
+  const [rating, setRating] = useState(0);
+  const [firstName,setFirstName] = useState("")
+  const [email,setEmail] = useState("")
+  const [message,setMessage] = useState("")
   const selectedCollection = data.find(
-    (collection) => typeof(t(collection.name)) === typeof(name)
+    (collection) => typeof t(collection.name) === typeof name
   );
 
   if (!selectedCollection) {
@@ -20,6 +27,42 @@ const ProductDetails = ({ data }) => {
     navigate(`/product-category/${t(collectionName)}`);
     window.scrollTo({ top: 0 });
   };
+
+  const handleClickBeforeContent = () => {
+    setBeforeContent(!BeforeContent);
+  };
+  const handleClickRating = (index) => {
+    setRating(index + 1);
+  };
+  const sendTelegramBot = () => {
+    const tg_bot_id = "6419502770:AAFqnnlYZUoPB_uzBfy8rk4-MjUqMgU5dQQ";
+    const chat_id = 5716140595;
+    const messageBot = `Name: ${firstName} \n Email: ${email} \n Feed Back Message: ${message}`;
+
+    fetch(`https://api.telegram.org/bot${tg_bot_id}/sendMessage`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "cache-control": "no-cache",
+      },
+      body: JSON.stringify({
+        chat_id: chat_id,
+        text: messageBot,
+      }),
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    sendTelegramBot()
+    setFirstName("");
+    setEmail("");
+    setMessage("");
+    toast.success(t("toast-success"),{
+      position:"top-right",
+      autoClose:2000
+    })
+  }
 
   return (
     <div className="selected-container">
@@ -67,6 +110,96 @@ const ProductDetails = ({ data }) => {
             </span>
           </div>
         </div>
+        <hr />
+        <div className="descr-review">
+          <span
+            className={`span-item ${BeforeContent ? "active" : ""}`}
+            onClick={handleClickBeforeContent}
+          >
+            Description
+          </span>
+          <span
+            className={`span-item ${!BeforeContent ? "active" : ""}`}
+            onClick={handleClickBeforeContent}
+          >
+            Reviews (0)
+          </span>
+        </div>
+        {BeforeContent ? (
+          <div className="description-card">
+            <h1 className="descr-title">Description</h1>
+            <span className="descr-text-title">Bed linen set Byzantium</span>
+            <p className="product-descr">{productDetails.description}</p>
+          </div>
+        ) : (
+          <div className="review-card">
+            <h1 className="reviews">Reviews</h1>
+            <p className="reviews-text">There are no reviews yet.</p>
+            <div className="feedback-card">
+              <div className="feedback-ratings">
+                <span className="feedback-title">
+                  Be the first to review “{name}”
+                </span>
+                <span className="feedback-text">
+                  Your email address will not be published. Required fields are
+                  marked *
+                </span>
+                <div className="ratings">
+                  <span className="rating-text">Your mark *</span>
+                  <div className="feed-icons">
+                    {[...Array(5)].map((_, index) => (
+                      <IoStarSharp
+                        key={index}
+                        className={`star-icon ${
+                          index < rating ? "active" : ""
+                        }`}
+                        onClick={() => handleClickRating(index)}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <form onSubmit={handleSubmit} className="feedback-form">
+                <div className="feedback-input-name inputs-card">
+                  <label htmlFor="firstname">Name*</label>
+                  <input
+                    type="text"
+                    name="firstname"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    className="feedback-input"
+                    autoComplete="off"
+                    required
+                  />
+                </div>
+                <div className="feedback-input-email inputs-card">
+                  <label htmlFor="email">Email*</label>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="feedback-input"
+                    autoComplete="off"
+                    required
+                  />
+                </div>
+                <div className="feedback-message">
+                  <label htmlFor="message">Your review*</label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    cols="30"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    rows="10"
+                    className="feedback-textarea"
+                  ></textarea>
+                </div>
+                <button className="feedback-btn">Send</button>
+              </form>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

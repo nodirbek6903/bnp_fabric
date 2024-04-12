@@ -35,6 +35,7 @@ const CollectionData = [
         name:"product-name1",
         img: WinterCollection1,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -49,6 +50,7 @@ const CollectionData = [
         name:"product-name2",
         img: WinterCollection2,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -63,6 +65,7 @@ const CollectionData = [
         name:"product-name3",
         img:WinterCollection3,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -77,6 +80,7 @@ const CollectionData = [
         name:"product-name4",
         img: WinterCollection4,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -91,6 +95,7 @@ const CollectionData = [
         name:"product-name5",
         img: WinterCollection5,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -105,6 +110,7 @@ const CollectionData = [
         name:"product-name6",
         img: WinterCollection6,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -119,6 +125,7 @@ const CollectionData = [
         name:"product-name7",
         img: WinterCollection7,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -133,6 +140,7 @@ const CollectionData = [
         name:"product-name8",
         img: WinterCollection8,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -147,6 +155,7 @@ const CollectionData = [
         name:"product-name9",
         img: WinterCollection9,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -161,6 +170,7 @@ const CollectionData = [
         name:"product-name10",
         img: WinterCollection10,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -175,6 +185,7 @@ const CollectionData = [
         name:"product-name11",
         img:AutumnCollection1,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -189,6 +200,7 @@ const CollectionData = [
         name: "product-name12",
         img:AutumnCollection2,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -203,6 +215,7 @@ const CollectionData = [
         name:"product-name13",
         img:AutumnCollection3,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -217,6 +230,7 @@ const CollectionData = [
         name:"product-name14",
         img:AutumnCollection4,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -231,6 +245,7 @@ const CollectionData = [
         name:"product-name15",
         img:AutumnCollection5,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -245,6 +260,7 @@ const CollectionData = [
         name:"product-name16",
         img:AutumnCollection6,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -259,6 +275,7 @@ const CollectionData = [
         name:"product-name17",
         img:AutumnCollection7,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -273,6 +290,7 @@ const CollectionData = [
         name:"product-name18",
         img:AutumnCollection8,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -287,6 +305,7 @@ const CollectionData = [
         name:"product-name19",
         img:AutumnCollection9,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -301,6 +320,7 @@ const CollectionData = [
         name:"product-name20",
         img:AutumnCollection10,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -315,6 +335,7 @@ const CollectionData = [
         name:"product-name21",
         img:SummerCollection1,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -329,6 +350,7 @@ const CollectionData = [
         name:"product-name22",
         img:SummerCollection2,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -343,6 +365,7 @@ const CollectionData = [
         name:"product-name23",
         img:SummerCollection3,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -357,6 +380,7 @@ const CollectionData = [
         name:"product-name24",
         img:SummerCollection4,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -371,6 +395,7 @@ const CollectionData = [
         name:"product-name25",
         img:SummerCollection5,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -385,6 +410,7 @@ const CollectionData = [
         name:"product-name26",
         img:SummerCollection6,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -399,6 +425,7 @@ const CollectionData = [
         name:"product-name27",
         img:SummerCollection7,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -413,6 +440,7 @@ const CollectionData = [
         name:"product-name28",
         img:SummerCollection8,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -427,6 +455,7 @@ const CollectionData = [
         name:"product-name29",
         img:SummerCollection9,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -441,6 +470,7 @@ const CollectionData = [
         name:"product-name30",
         img:SummerCollection10,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -455,6 +485,7 @@ const CollectionData = [
         name:"product-name4",
         img:SummerCollection10,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -469,6 +500,7 @@ const CollectionData = [
         name:"product-name12",
         img:AutumnCollection1,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -483,6 +515,7 @@ const CollectionData = [
         name:"product-name23",
         img:SummerCollection7,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -497,6 +530,7 @@ const CollectionData = [
         name:"product-name9",
         img:AutumnCollection5,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",
@@ -511,6 +545,7 @@ const CollectionData = [
         name:"product-name30",
         img:AutumnCollection9,
         productDetails: {
+            description:"Bed linen is a household item and bedroom decor designed for comfort and beauty. You can choose from a variety of bed sets that include sheets, blankets, pillow crafts and other accessories. They have various designs, prints, embroideries or other design elements. They are easy and quick to clean and clean. They are made from soft materials and they make your bedrooms cozy and cozy.",
             material:"100% cotton flannel",
             pillow_case: "50x70 cm (2 pcs.)",
             bed_sheet: "260×280 cm (1 piece)",

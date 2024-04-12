@@ -8,10 +8,184 @@
   width: 100%;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 100px;
+  gap: 20px;
 }
+hr{
+  width: 100%;
+  border: 1px solid #888;
+}
+.descr-review{
+  display: flex;
+  width: 50%;
+}
+.descr-review .span-item{
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+}
+.descr-review .span-item.active{
+  color: #f42c37;
+}
+.descr-review .span-item::after{
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #f42c37;
+  transition: 0.3s;
+}
+.descr-review .span-item.active::after{
+  width: 100%;
+}
+.description-card{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 100px;
+}
+.descr-title{
+  font-size: 30px;
+}
+.descr-text-title{
+  font-size: 28px;
+  font-weight: bold;
+}
+.product-descr{
+  font-size: 18px;
+  color: #888;
+  text-align: justify;
+  line-height: 1.5;
+}
+.review-card{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 100px;
+}
+.feedback-card{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.reviews{
+  font-size: 30px;
+}
+.reviews-text{
+  font-size: 20px;
+  color: #888;
+  line-height: 1.5;
+}
+.feedback-ratings{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.feedback-title{
+  font-size: 28px;
+  font-weight: bold;
+}
+.feedback-text{
+  font-size: 20px;
+  color: #3f3e3e;
+  line-height: 1.5;
+}
+.ratings{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.feed-icons{
+  display: flex;
+  gap: 10px;
+}
+.feed-icons .star-icon{
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.feed-icons .star-icon.active{
+  color: #f42c37;
+}
+.feed-icons .star-icon.active:hover{
+  color: #f42c37;
+}
+
+/* forms */
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.inputs-card {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  width: 40%;
+}
+.feedback-card div label{
+  font-size: 20px;
+  color: #3f3e3e;
+}
+.feedback-input,
+.feedback-textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  outline: none;
+  background-color: #eee;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.feedback-input-name,
+.feedback-input-email {
+  width: 45%;
+}
+
+.feedback-message {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.feedback-message textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+  resize: none;
+  margin-top: 10px;
+}
+
+.feedback-btn {
+  background-color: #f42c37;
+  color: white;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+.feedback-btn:hover {
+  background-color: #f20e19;
+}
+
 .selected-card {
   width: 90%;
   display: flex;

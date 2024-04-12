@@ -25,7 +25,6 @@ const ProductCategory = ({ data }) => {
   const handleClickProduct = (category) => {
     navigate(`/product/${t(category.name)}`);
     window.scrollTo({ top: 0 });
-    console.log(category);
   };
 
   const handleSearchChange = (e) => {
