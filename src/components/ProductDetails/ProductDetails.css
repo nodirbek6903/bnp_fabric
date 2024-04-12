@@ -254,6 +254,31 @@ hr{
   .selected-cards {
     margin-top: 50px;
   }
+  .descr-review .span-item,
+  .reviews-text,.feedback-text,
+  .feedback-card div label,.feedback-btn{
+    font-size: 18px;
+  }
+  .descr-title{
+    font-size: 28px;
+  }
+  .descr-text-title,.feedback-title{
+    font-size: 26px;
+  }
+  .product-descr{
+    font-size: 16px;
+  }
+  .review-card,.description-card{
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  .reviews{
+    font-size: 28px;
+  }
+  .feed-icons .star-icon{
+    font-size: 28px;
+  }
 }
 @media screen and (max-width: 1000px) {
   .selected-card {
@@ -275,13 +300,42 @@ hr{
     width: 100%;
     border-radius: 0px;
   }
+  .feedback-input-name,
+.feedback-input-email{
+  width: 100%;
+}
+.feedback-input,
+.feedback-textarea{
+  padding: 13px;
+}
 }
 @media screen and (max-width: 800px) {
-  
   .selected-table {
     width: 95%;
     margin: 0 auto;
     margin-top: 50px;
+  }
+  .review-card,.description-card{
+    width: 95%;
+    margin-top: 0 auto;
+    gap: 10px;
+  }
+  .feedback-card{
+    width: 100%;
+  }
+  .descr-review .span-item,
+  .reviews-text,.feedback-text,
+  .feedback-card div label,.feedback-btn{
+    font-size: 16px;
+  }
+  .descr-title{
+    font-size: 25px;
+  }
+  .descr-text-title,.feedback-title{
+    font-size: 23px;
+  }
+  .product-descr{
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 700px) {
@@ -296,8 +350,39 @@ hr{
   .category-name{
     font-size: 15px;
   }
+  .descr-review .span-item,
+  .reviews-text,.feedback-text,
+  .feedback-card div label,.feedback-btn{
+    font-size: 14px;
+  }
+  .descr-title{
+    font-size: 23px;
+  }
+  .descr-text-title,.feedback-title{
+    font-size: 21px;
+  }
+  .product-descr{
+    font-size: 12px;
+  }
 }
 @media screen and (max-width: 400px) {
+  .descr-review .span-item,
+  .reviews-text,.feedback-text,
+  .feedback-card div label,.feedback-btn{
+    font-size: 14px;
+  }
+  .feedback-btn{
+    padding: 8px 35px;
+  }
+  .descr-title{
+    font-size: 23px;
+  }
+  .descr-text-title,.feedback-title{
+    font-size: 21px;
+  }
+  .product-descr{
+    font-size: 12px;
+  }
 }
 @media screen and (max-width: 320px) {
 }
