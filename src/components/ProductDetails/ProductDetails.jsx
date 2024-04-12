@@ -76,37 +76,37 @@ const ProductDetails = ({ data }) => {
             <table className="table-container">
               <tr>
                 <td>{t("Material")}:</td>
-                <td>{productDetails?.material}</td>
+                <td>{t(productDetails?.material)}</td>
               </tr>
               <hr />
               <tr>
                 <td>{t("Pillow case")}:</td>
-                <td>{productDetails?.pillow_case}</td>
+                <td>{t(productDetails?.pillow_case)}</td>
               </tr>
               <hr />
               <tr>
                 <td>{t("Bed sheet")}:</td>
-                <td>{productDetails?.bed_sheet}</td>
+                <td>{t(productDetails?.bed_sheet)}</td>
               </tr>
               <hr />
               <tr>
                 <td>{t("Duvet cover")}:</td>
-                <td>{productDetails?.duvet_cover}</td>
+                <td>{t(productDetails?.duvet_cover)}</td>
               </tr>
               <hr />
               <tr>
                 <td>{t("Size")}:</td>
-                <td>{productDetails?.size}</td>
+                <td>{t(productDetails?.size)}</td>
               </tr>
               <hr />
               <tr>
                 <td>{t("Manufacturer")}:</td>
-                <td>{productDetails?.manufacturer}</td>
+                <td>{t(productDetails?.manufacturer)}</td>
               </tr>
             </table>
             <span className="category-name">
-              {t("Category")}:{" "}
-              <a onClick={handleClickItem}>{t(collectionName)}</a>
+              <td>{t("Category")}:</td>
+              <td><a onClick={handleClickItem}>{t(collectionName)}</a></td>
             </span>
           </div>
         </div>
@@ -116,36 +116,35 @@ const ProductDetails = ({ data }) => {
             className={`span-item ${BeforeContent ? "active" : ""}`}
             onClick={handleClickBeforeContent}
           >
-            Description
+            {t("description")}
           </span>
           <span
             className={`span-item ${!BeforeContent ? "active" : ""}`}
             onClick={handleClickBeforeContent}
           >
-            Reviews (0)
+            {t("reviews")}(0)
           </span>
         </div>
         {BeforeContent ? (
           <div className="description-card">
-            <h1 className="descr-title">Description</h1>
+            <h1 className="descr-title">{t("description")}</h1>
             <span className="descr-text-title">Bed linen set Byzantium</span>
-            <p className="product-descr">{productDetails.description}</p>
+            <p className="product-descr">{t(productDetails.description)}</p>
           </div>
         ) : (
           <div className="review-card">
-            <h1 className="reviews">Reviews</h1>
-            <p className="reviews-text">There are no reviews yet.</p>
+            <h1 className="reviews">{t("reviews")}</h1>
+            <p className="reviews-text">{t("review-comment")}</p>
             <div className="feedback-card">
               <div className="feedback-ratings">
                 <span className="feedback-title">
-                  Be the first to review “{name}”
+                  {t("review-sorov")} {name} 
                 </span>
                 <span className="feedback-text">
-                  Your email address will not be published. Required fields are
-                  marked *
+                  {t("review-text")} *
                 </span>
                 <div className="ratings">
-                  <span className="rating-text">Your mark *</span>
+                  <span className="rating-text">{t("Your mark")} *</span>
                   <div className="feed-icons">
                     {[...Array(5)].map((_, index) => (
                       <IoStarSharp
@@ -161,7 +160,7 @@ const ProductDetails = ({ data }) => {
               </div>
               <form onSubmit={handleSubmit} className="feedback-form">
                 <div className="feedback-input-name inputs-card">
-                  <label htmlFor="firstname">Name*</label>
+                  <label htmlFor="firstname">{t("firstname")}*</label>
                   <input
                     type="text"
                     name="firstname"
@@ -173,7 +172,7 @@ const ProductDetails = ({ data }) => {
                   />
                 </div>
                 <div className="feedback-input-email inputs-card">
-                  <label htmlFor="email">Email*</label>
+                  <label htmlFor="email">{t("email")}*</label>
                   <input
                     type="email"
                     value={email}
@@ -184,7 +183,7 @@ const ProductDetails = ({ data }) => {
                   />
                 </div>
                 <div className="feedback-message">
-                  <label htmlFor="message">Your review*</label>
+                  <label htmlFor="message">{t("message")}*</label>
                   <textarea
                     name="message"
                     id="message"
@@ -195,7 +194,7 @@ const ProductDetails = ({ data }) => {
                     className="feedback-textarea"
                   ></textarea>
                 </div>
-                <button className="feedback-btn">Send</button>
+                <button className="feedback-btn">{t("reviews-btn")}</button>
               </form>
             </div>
           </div>
