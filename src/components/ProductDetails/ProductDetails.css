@@ -366,6 +366,9 @@ hr{
   }
 }
 @media screen and (max-width: 400px) {
+  .review-card,.description-card{
+    margin-top: 20px;
+  }
   .descr-review .span-item,
   .reviews-text,.feedback-text,
   .feedback-card div label,.feedback-btn{
