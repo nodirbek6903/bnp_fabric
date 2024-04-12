@@ -128,7 +128,7 @@ const ProductDetails = ({ data }) => {
         {BeforeContent ? (
           <div className="description-card">
             <h1 className="descr-title">{t("description")}</h1>
-            <span className="descr-text-title">Bed linen set Byzantium</span>
+            <span className="descr-text-title">{t("descr-title")}</span>
             <p className="product-descr">{t(productDetails.description)}</p>
           </div>
         ) : (
