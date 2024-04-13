@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./ProductDetails.css";
 import { useTranslation } from "react-i18next";
@@ -14,8 +14,11 @@ const ProductDetails = ({ data }) => {
   const [firstName,setFirstName] = useState("")
   const [email,setEmail] = useState("")
   const [message,setMessage] = useState("")
+  const translatedName = t(name)
+
+  
   const selectedCollection = data.find(
-    (collection) => typeof t(collection.name) === typeof name
+    (collection) =>  t(collection.name) ===  translatedName
   );
 
   if (!selectedCollection) {

@@ -11,9 +11,20 @@ import ProductCategory from "./components/ProductCategory/ProductCategory";
 import { ToastContainer } from "react-toastify";
 import { FaTelegram } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 function App() {
-  const { t } = useTranslation();
+  const { t,i18n } = useTranslation();
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("language")
+    if(savedLanguage){
+      i18n.changeLanguage(savedLanguage)
+    }else{
+      localStorage.setItem("language","en")
+      i18n.changeLanguage("en")
+    }
+  },[i18n])
   return (
     <>
       <ToastContainer />

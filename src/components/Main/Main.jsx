@@ -12,7 +12,6 @@ import CollectionData from "./../../Data/ProductData";
 import { Link, useNavigate } from "react-router-dom";
 import ProductDetails from "../ProductDetails/ProductDetails";
 import { useTranslation } from 'react-i18next';
-import { FaTelegram } from "react-icons/fa";
 
 const Main = () => {
   const [selectedCollection, setSelectedCollection] = useState(null);
@@ -22,7 +21,7 @@ const Main = () => {
 
   const handleCollectionClick = (collection) => {
     setSelectedCollection((prev) => prev = collection);
-    navigate(`/product/${t(collection.name)}`);
+    navigate(`/product/${collection.name}`);
     window.scrollTo({ top: 0 });
   };
   
