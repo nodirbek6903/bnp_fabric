@@ -10,16 +10,6 @@ const Navbar = () => {
   const [addShadow,setAddShadow] = useState(false)
   const { t, i18n } = useTranslation();
 
-  useEffect(() => {
-    const savedLanguage = localStorage.getItem("language")
-    if(savedLanguage){
-      i18n.changeLanguage(savedLanguage)
-    }else{
-      localStorage.setItem("language", "en")
-      i18n.changeLanguage("en")
-    }
-  },[i18n])
-
   const handleClickNav = () => {
     setShowNavbar(!showNavbar);
     window.scrollTo({top:0})
