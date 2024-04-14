@@ -18,7 +18,7 @@
   padding: 0 50px;
   background: #fff;
   max-width: 1560px;
-  z-index: 9;
+  z-index: 99999;
 }
 .nav-container .container.activeNav {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -100,7 +100,7 @@
 }
 @media screen and (max-width: 700px) {
   .nav-logo-items .nav-items {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     display: none;
@@ -108,7 +108,7 @@
     width: 40%;
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 2;
+    z-index: 9999;
     justify-content: center;
     align-content: center;
     text-align: center;
