@@ -141,7 +141,7 @@ const ProductDetails = ({ data }) => {
             <div className="feedback-card">
               <div className="feedback-ratings">
                 <span className="feedback-title">
-                  {t("review-sorov")} {name} 
+                  {t("review-sorov")} {t(name)} 
                 </span>
                 <span className="feedback-text">
                   {t("review-text")} *
