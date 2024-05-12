@@ -70,7 +70,7 @@ const Footer = () => {
         </div>
         <div className="footer-card card3">
           <span className="card-title">{t("footer-section1-title2")}</span>
-          <span className="card-contact-item">Bukhara, st. Alpomysh 80.</span>
+          <span className="card-contact-item">Ferghana, st. Amir Temur 80.</span>
           <span className="card-contact-item">Bnpuz@bk.ru</span>
           <span className="card-contact-item">bnp_fabrik</span>
           <span className="card-contact-item">info@bnpfabric.com</span>
@@ -87,7 +87,7 @@ const Footer = () => {
       </div>
       <div className="footer-texts">
         <span className="footer-text">
-          &copy;{new Date().getFullYear()}LLC"BUKHARA NATURAL PRODUCT". {t("footer-section2-text")}
+          &copy;{new Date().getFullYear()}LLC"FERGHANA NATURAL PRODUCT". {t("footer-section2-text")}
         </span>
       </div>
     </div>

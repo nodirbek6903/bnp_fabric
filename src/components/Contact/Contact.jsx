@@ -114,7 +114,7 @@ const Contact = () => {
           <div className="contact-card">
             <CiLocationOn className="contact-icon" />
             <span className="contact-text">
-              <b>{t("Contact-card-text3")}:</b>Buxhara,st. Alpomysh 80
+              <b>{t("Contact-card-text3")}:</b>Ferghana,st. Amir Temur 80
             </span>
           </div>
         </div>
